@@ -1,7 +1,7 @@
 class Families:
     def __init__(self, ID):
         self.ID = ID
-        self.Maried = "NA"
+        self.Married = "NA"
         self.Divorced = "NA"
         self.HusbandID = "NA"
         self.HusbandName = "NA"
