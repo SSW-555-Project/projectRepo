@@ -1,0 +1,88 @@
+--Author: Po Yu Yang
+
+
+0 HEAD
+1 SOUR Family Echo
+2 WWW http://www.familyecho.com/
+1 FILE My Family
+1 DATE 4 SEP 2018
+1 DEST ANSTFILE
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 SUBM @I3@
+2 NAME Darien Yang
+1 SUBN
+1 CHAR UTF-8
+0 @I1@ INDI
+1 NAME
+1 SEX M
+1 FAMS @F1@
+0 @I2@ INDI
+1 NAME Linda /Aniston/
+2 GIVN Linda
+2 SURN Aniston
+2 _MARNM Pitt
+1 SEX F
+1 BIRT
+2 DATE 3 FEB 1962
+1 FAMS @F1@
+1 FAMC @F2@
+0 @I3@ INDI
+1 NAME
+1 FAMC @F1@
+0 @I4@ INDI
+1 NAME Peter /Aniston/
+2 GIVN Peter
+2 SURN Aniston
+2 _MARNM Aniston
+1 SEX M
+1 BIRT
+2 DATE 2 MAY 1911
+1 DEAT Y
+2 DATE 14 JAN 1960
+1 FAMS @F2@
+0 @I5@ INDI
+1 NAME Gucci /Prada/
+2 GIVN Gucci
+2 SURN Prada
+2 _MARNM Aniston
+1 SEX F
+1 BIRT
+2 DATE 19 SEP 1950
+1 FAMS @F2@
+1 FAMS @F3@
+0 @I6@ INDI
+1 NAME Hollister /Polo/
+2 GIVN Hollister
+2 SURN Polo
+2 _MARNM Aniston
+1 SEX M
+1 BIRT
+2 DATE 5 SEP 1911
+1 FAMS @F3@
+0 @I7@ INDI
+1 NAME Ambercrombie /Aniston/
+2 GIVN Ambercrombie
+2 SURN Aniston
+2 _MARNM Aniston
+1 SEX M
+1 BIRT
+2 DATE 7 JUL 1955
+1 FAMC @F3@
+0 @F1@ FAM
+1 HUSB @I1@
+1 WIFE @I2@
+1 CHIL @I3@
+1 _CURRENT Y
+0 @F2@ FAM
+1 HUSB @I4@
+1 WIFE @I5@
+1 CHIL @I2@
+1 _CURRENT N
+0 @F3@ FAM
+1 HUSB @I6@
+1 WIFE @I5@
+1 CHIL @I7@
+1 _CURRENT Y
+0 TRLR

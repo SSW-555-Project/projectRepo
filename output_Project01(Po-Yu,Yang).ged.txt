@@ -1,0 +1,176 @@
+Reading file : Project01(Po-Yu,Yang).ged
+File output : 
+--Author: Po Yu Yang
+
+--> 
+--> 
+--> 0 HEAD
+<-- 0|HEAD|N|
+--> 1 SOUR Family Echo
+<-- 1|SOUR|N|Family Echo
+--> 2 WWW http://www.familyecho.com/
+<-- 2|WWW|N|http://www.familyecho.com/
+--> 1 FILE My Family
+<-- 1|FILE|N|My Family
+--> 1 DATE 4 SEP 2018
+<-- 1|DATE|N|4 SEP 2018
+--> 1 DEST ANSTFILE
+<-- 1|DEST|N|ANSTFILE
+--> 1 GEDC
+<-- 1|GEDC|N|
+--> 2 VERS 5.5.1
+<-- 2|VERS|N|5.5.1
+--> 2 FORM LINEAGE-LINKED
+<-- 2|FORM|N|LINEAGE-LINKED
+--> 1 SUBM @I3@
+<-- 1|SUBM|N|@I3@
+--> 2 NAME Darien Yang
+<-- 2|NAME|Y|Darien Yang
+--> 1 SUBN
+<-- 1|SUBN|N|
+--> 1 CHAR UTF-8
+<-- 1|CHAR|N|UTF-8
+--> 0 @I1@ INDI
+<-- 0|INDI|Y|@I1@
+--> 1 NAME
+<-- 1|NAME|Y|
+--> 1 SEX M
+<-- 1|SEX|Y|M
+--> 1 FAMS @F1@
+<-- 1|FAMS|Y|@F1@
+--> 0 @I2@ INDI
+<-- 0|INDI|Y|@I2@
+--> 1 NAME Linda /Aniston/
+<-- 1|NAME|Y|Linda /Aniston/
+--> 2 GIVN Linda
+<-- 2|GIVN|N|Linda
+--> 2 SURN Aniston
+<-- 2|SURN|N|Aniston
+--> 2 _MARNM Pitt
+<-- 2|_MARNM|N|Pitt
+--> 1 SEX F
+<-- 1|SEX|Y|F
+--> 1 BIRT
+<-- 1|BIRT|Y|
+--> 2 DATE 3 FEB 1962
+<-- 2|DATE|N|3 FEB 1962
+--> 1 FAMS @F1@
+<-- 1|FAMS|Y|@F1@
+--> 1 FAMC @F2@
+<-- 1|FAMC|Y|@F2@
+--> 0 @I3@ INDI
+<-- 0|INDI|Y|@I3@
+--> 1 NAME
+<-- 1|NAME|Y|
+--> 1 FAMC @F1@
+<-- 1|FAMC|Y|@F1@
+--> 0 @I4@ INDI
+<-- 0|INDI|Y|@I4@
+--> 1 NAME Peter /Aniston/
+<-- 1|NAME|Y|Peter /Aniston/
+--> 2 GIVN Peter
+<-- 2|GIVN|N|Peter
+--> 2 SURN Aniston
+<-- 2|SURN|N|Aniston
+--> 2 _MARNM Aniston
+<-- 2|_MARNM|N|Aniston
+--> 1 SEX M
+<-- 1|SEX|Y|M
+--> 1 BIRT
+<-- 1|BIRT|Y|
+--> 2 DATE 2 MAY 1911
+<-- 2|DATE|N|2 MAY 1911
+--> 1 DEAT Y
+<-- 1|DEAT|Y|Y
+--> 2 DATE 14 JAN 1960
+<-- 2|DATE|N|14 JAN 1960
+--> 1 FAMS @F2@
+<-- 1|FAMS|Y|@F2@
+--> 0 @I5@ INDI
+<-- 0|INDI|Y|@I5@
+--> 1 NAME Gucci /Prada/
+<-- 1|NAME|Y|Gucci /Prada/
+--> 2 GIVN Gucci
+<-- 2|GIVN|N|Gucci
+--> 2 SURN Prada
+<-- 2|SURN|N|Prada
+--> 2 _MARNM Aniston
+<-- 2|_MARNM|N|Aniston
+--> 1 SEX F
+<-- 1|SEX|Y|F
+--> 1 BIRT
+<-- 1|BIRT|Y|
+--> 2 DATE 19 SEP 1950
+<-- 2|DATE|N|19 SEP 1950
+--> 1 FAMS @F2@
+<-- 1|FAMS|Y|@F2@
+--> 1 FAMS @F3@
+<-- 1|FAMS|Y|@F3@
+--> 0 @I6@ INDI
+<-- 0|INDI|Y|@I6@
+--> 1 NAME Hollister /Polo/
+<-- 1|NAME|Y|Hollister /Polo/
+--> 2 GIVN Hollister
+<-- 2|GIVN|N|Hollister
+--> 2 SURN Polo
+<-- 2|SURN|N|Polo
+--> 2 _MARNM Aniston
+<-- 2|_MARNM|N|Aniston
+--> 1 SEX M
+<-- 1|SEX|Y|M
+--> 1 BIRT
+<-- 1|BIRT|Y|
+--> 2 DATE 5 SEP 1911
+<-- 2|DATE|N|5 SEP 1911
+--> 1 FAMS @F3@
+<-- 1|FAMS|Y|@F3@
+--> 0 @I7@ INDI
+<-- 0|INDI|Y|@I7@
+--> 1 NAME Ambercrombie /Aniston/
+<-- 1|NAME|Y|Ambercrombie /Aniston/
+--> 2 GIVN Ambercrombie
+<-- 2|GIVN|N|Ambercrombie
+--> 2 SURN Aniston
+<-- 2|SURN|N|Aniston
+--> 2 _MARNM Aniston
+<-- 2|_MARNM|N|Aniston
+--> 1 SEX M
+<-- 1|SEX|Y|M
+--> 1 BIRT
+<-- 1|BIRT|Y|
+--> 2 DATE 7 JUL 1955
+<-- 2|DATE|N|7 JUL 1955
+--> 1 FAMC @F3@
+<-- 1|FAMC|Y|@F3@
+--> 0 @F1@ FAM
+<-- 0|FAM|Y|@F1@
+--> 1 HUSB @I1@
+<-- 1|HUSB|Y|@I1@
+--> 1 WIFE @I2@
+<-- 1|WIFE|Y|@I2@
+--> 1 CHIL @I3@
+<-- 1|CHIL|Y|@I3@
+--> 1 _CURRENT Y
+<-- 1|_CURRENT|N|Y
+--> 0 @F2@ FAM
+<-- 0|FAM|Y|@F2@
+--> 1 HUSB @I4@
+<-- 1|HUSB|Y|@I4@
+--> 1 WIFE @I5@
+<-- 1|WIFE|Y|@I5@
+--> 1 CHIL @I2@
+<-- 1|CHIL|Y|@I2@
+--> 1 _CURRENT N
+<-- 1|_CURRENT|N|N
+--> 0 @F3@ FAM
+<-- 0|FAM|Y|@F3@
+--> 1 HUSB @I6@
+<-- 1|HUSB|Y|@I6@
+--> 1 WIFE @I5@
+<-- 1|WIFE|Y|@I5@
+--> 1 CHIL @I7@
+<-- 1|CHIL|Y|@I7@
+--> 1 _CURRENT Y
+<-- 1|_CURRENT|N|Y
+--> 0 TRLR
+<-- 0|TRLR|N|
