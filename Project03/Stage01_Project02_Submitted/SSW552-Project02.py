@@ -10,8 +10,8 @@
 # In[2]:
 
 
-file_name_1="Project01(Po-Yu,Yang)"
-file_name_2="proj02test"
+file_name_1="Project01"
+
 #Valid Tag
 valid_tags_set = set(['INDI','NAME','SEX','BIRT','DEAT','FAMC',             'FAMS','FAM','MARR','HUSB','WIFE','CHIL',             'DIV','DATE','HEAD','TRLR','NOTE'])
 
@@ -79,9 +79,4 @@ def readAndPrint(filename):
 
 readAndPrint(file_name_1)
 
-
-# In[5]:
-
-
-readAndPrint(file_name_2)
 
