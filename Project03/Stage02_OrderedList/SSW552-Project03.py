@@ -1,20 +1,20 @@
 
 # coding: utf-8
 
-# In[17]:
+# In[1]:
 
 
-from classModule.otcls import * 
+from classModule.BasicClass import *
+from classModule.ClassFunc import * 
+
+import os
 import time
 import datetime
 from datetime import date
 import prettytable as pt
 
 valid_tags = {0:["INDI","FAM","HEAD","TRLR","NOTE"],            1:["NAME","SEX","BIRT","DEAT","FAMC","FAMS","MARR","HUSB","WIFE","CHIL","DIV"]         ,2:"DATE"}
-file_name_1="My-Family-17-Sep-2018-358"
-file_name_2="courseExample"
-individualList=[]
-familyList=[]
+
 def monthToNum(shortMonth):
     return{
             'JAN' : 1,
@@ -31,10 +31,11 @@ def monthToNum(shortMonth):
             'DEC' : 12
     }[shortMonth]
 
-def readAndSaveToList(filename,List,List2):
+def readAndSaveToList(filePath, List, List2):
+    
     #read gedcom file
-    filename=filename+".ged"
-    input_ged = open(filename, "r") 
+    print(filePath)
+    input_ged = open(filePath, "r") 
    # saveFile="output_"+filename+".txt"
    # writeFile = open(saveFile, "w")
     #set flags
@@ -139,41 +140,43 @@ def readAndSaveToList(filename,List,List2):
                         
 
 
-# In[18]:
+# In[2]:
 
 
-readAndSaveToList(file_name_2,individualList,familyList)
+# input sample
+file_name = 'CourseSample.ged'
+filePath = os.path.join(os.getcwd(), "Sample/" + file_name)
+
+# create list for individual and families
+individualList=[]
+familyList=[]
+
+# read file to create individual and families
+if os.path.exists(filePath):
+    readAndSaveToList(filePath, individualList, familyList)
+else:
+    print("File doesn't exist")
 
 
-# In[19]:
+# In[3]:
 
 
-len(individualList)
+# sort list
+individualList = OrderById(individualList)
 
-for each in individualList:
-   # print(each.ID+each.Name+"\t"+str(each.Age)+"\t"+each.Birthday+"\t"+each.Death+each.Alive)
-    print(each.Spouse)
-
-
-# In[20]:
+familyList = OrderById(familyList)
 
 
-for each in familyList:
-    print(each.Children)
+# In[4]:
 
 
-# In[22]:
-
+#Making PrettyTable
 
 tb=pt.PrettyTable()
 tb.field_names=["ID","Name","Gender","Birthday","Age","Alive","Death"                ,"Child","Spouse"]
 for each in individualList:
     tb.add_row([each.ID,each.Name,each.Gender,each.Birthday,each.Age,              each.Alive,each.Death,each.Child,each.Spouse])
 print(tb)
-
-
-# In[23]:
-
 
 tb2=pt.PrettyTable()
 tb2.field_names=["ID","Married","Divorced","Husband ID","Husband Name","Wife ID","Wife Name"                ,"Children"]
@@ -182,14 +185,16 @@ for each in familyList:
 print(tb2)
 
 
-# In[26]:
+# In[5]:
 
 
-writefile = open("output.txt","w") 
-writefile.write("Individuals") 
+outputFile="outputFile.txt"
+
+writefile = open(outputFile,"w") 
+writefile.write("Individuals\n") 
 writefile.write(tb.get_string()) 
 writefile.write("\n") 
-writefile.write("Families") 
+writefile.write("Families\n") 
 writefile.write(tb2.get_string()) 
 writefile.close()
 
