@@ -31,5 +31,15 @@ def OrderById(inputLst):
 
     return orderedlst
 
+def DateBeforeCur(test_Year,test_Month,test_Day):
+    if type(test_Year)!=int or type(test_Month)!=int or type(test_Day)!=int:
+        print("Wrong data type for input")
+        return False
+    test_Date=datetime.date(test_Year,test_Month,test_Day)
+    count=(test_Date-date.today())/datetime.timedelta(days=1)
+    return count<0
+
+
+
 
 
