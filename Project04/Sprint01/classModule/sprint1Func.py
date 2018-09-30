@@ -88,3 +88,34 @@ def isDivorceBeforeDeath(divorceday, deathday):
     if(divorceday - deathday).total_seconds() > 0 :
         print("ERROR: FAMILY: US06 : Divorced on "+str(divorceday)+" after death on "+str(deathday))
     return
+
+def birthBFmarried(fmID, fmDay,iBirth):
+    if fmDay == 'NA':
+        return False
+    
+    birth = datetime.datetime.strptime(iBirth, "%Y-%m-%d")
+    marrDay = datetime.datetime.strptime(fmDay, "%Y-%m-%d")
+    ID = fmID
+    
+    if (birth - marrDay).total_seconds() > 0:
+        print(f"ERROR: FAMILY: {ID} US02: Birth day '{birth}' after Married day: '{marrDay}'")
+        return False
+    else:
+        print(f"FAMILY: US02: {ID} married day '{marrDay}' is valid")
+        return True
+    
+def ageLess150(indi):
+    if  indi == None:
+        print("No individual can be tested")
+        return False
+
+    else: 
+        ID = indi.ID
+        Age = indi.Age
+        if Age > 150:
+            #                     raise ValueError('The age is over 150!')
+            print(f"ERROR: INDIVIDUAL: US07: {ID} age '{Age}' is over 150!")
+            return False
+        else:
+            print(f"INDIVIDUAL: US07 {ID}'s age '{Age}' is less than 150 ")
+            return Age < 150
