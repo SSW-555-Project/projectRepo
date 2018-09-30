@@ -41,7 +41,7 @@ def isDateBeforeCur(day):
     if day!="NA":
         date=datetime.datetime.strptime(day, '%Y-%m-%d')
         if (date-datetime.datetime.now()).days>0:
-            print("ERROR: US01: Date is not before current time.")
+            print("ERROR: US01: Date "+str(day)+" is not before current time.")
     return 
 
 def isValidDivorce(divorceday, deathday):
