@@ -119,3 +119,31 @@ def ageLess150(indi):
         else:
             print(f"INDIVIDUAL: US07 {ID}'s age '{Age}' is less than 150 ")
             return Age < 150
+def US04(famID,Date_married,Date_divorced):
+    from datetime import datetime
+    if(Date_married!="NA" and Date_divorced!="NA"):
+        result=datetime.strptime(Date_divorced, "%Y-%m-%d")-datetime.strptime(Date_married, "%Y-%m-%d")
+        #print(Date_divorced,Date_married)
+        #print(result.days)
+        if(result.days<0):
+            print("Error Family: US04 ",famID," : Marriage",Date_married, "after divorce",Date_divorced )
+        else:
+            print("Family: US04 ",famID," : Marriage",Date_married, "before divorce",Date_divorced, "is valid" )
+            
+            
+def US08(iList,famID,ID,married_date,divorced_date):
+    from datetime import datetime
+    if(married_date!="NA" and divorced_date!="NA"):
+        for indi in iList:
+            indiid=indi.ID
+            married_period= datetime.now()- datetime.strptime(married_date, "%Y-%m-%d")
+            indi_period= datetime.now()- datetime.strptime(indi.Birthday, "%Y-%m-%d")
+            divorced_period= datetime.now()- datetime.strptime(divorced_date, "%Y-%m-%d")
+            #print(married_period.days, indi_period.days, divorced_period.days)
+            if(indi_period.days<married_period.days and indi_period.days>=divorced_period.days-270):
+                print("Error Individual ID: US08 ",indiid,": birthday:", indi.Birthday, "is born before parents marriage: ",married_date )
+            elif(indi_period.days>=married_period.days and indi_period.days<divorced_period.days-270):
+                print("Error Individual ID: US08 ",indiid,": birthday:", indi.Birthday, "is born after parents divorced: ",divorced_date )
+            elif(indi_period.days>married_period.days and indi_period.days<divorced_period.days-270):
+                print("Error Individual ID: US08 ",indiid,": birthday:", indi.Birthday, "is born after parents divorced: "\
+                      ,divorced_date,"and also born before parents marriage : ",married_date )
