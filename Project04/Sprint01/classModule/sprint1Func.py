@@ -38,24 +38,17 @@ def isMarriageBeforeDeath(marriageday, deathday):
     
 def isDateBeforeCur(day):
     # US01 Every dates should be earlier before current date
-    if isinstance(day, str) != True:
-        print("msg: The type of "+day+" is not str.")  
-        return
-    date=datetime.datetime.strptime(day, '%Y-%m-%d')
-    if (date-datetime.datetime.now()).days>0:
-        print("ERROR: US01: Date is not before current time.")
+    if day!="NA":
+        date=datetime.datetime.strptime(day, '%Y-%m-%d')
+        if (date-datetime.datetime.now()).days>0:
+            print("ERROR: US01: Date is not before current time.")
     return 
 
 def isValidDivorce(divorceday, deathday):
     # US06 Check whether divorce date is before death date or not
-    if isinstance(divorceday, str) != True:
-        print("msg = The type of "+divorceday+" is not str")
-        return 
-    if isinstance(deathday, str) != True:
-        print("msg = The type of "+deathday+" is not str")
-        return  
-    divorce=datetime.datetime.strptime(divorceday, '%Y-%m-%d')
-    death=datetime.datetime.strptime(deathday, '%Y-%m-%d')
-    if(divorce - death).days > 0 :
-        print("ERROR: FAMILY: US06 : Divorced on "+divorceday+" after death on "+deathday)
+    if divorceday !="NA" or deathday !="NA":
+        divorce=datetime.datetime.strptime(divorceday, '%Y-%m-%d')
+        death=datetime.datetime.strptime(deathday, '%Y-%m-%d')
+        if(divorce - death).days > 0 :
+            print("ERROR: FAMILY: US06 : Divorced on "+str(divorceday)+" after death on "+str(deathday))
     return 
