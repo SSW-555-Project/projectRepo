@@ -107,12 +107,16 @@ def US10(marriageDay, birthday):
     
         birthday = datetime.datetime.strptime(birthday, '%Y-%m-%d')
 
-    if(marriageDay - birthday).days/365 < 14 :
+    if ((marriageDay - birthday).days)/365 < 14 :
         return False
     return True
 
 
-
+def US15(children):
+    # US15 Check whether the family has fewer than 15 siblings
+    if len(children)>=15:
+        return False
+    return True
 
 
 
