@@ -65,8 +65,8 @@ def isDateBeforeCur(day):
     if day!='NA':
         date=datetime.datetime.strptime(day, '%Y-%m-%d')
         if (date-datetime.datetime.now()).days>0:
-            print("ERROR: US01: Date "+str(day)+" is not before current time.")
-    return 
+            return False
+    return True
 
 
 def isDivorceBeforeDeath(divorceday, deathday):
@@ -76,18 +76,19 @@ def isDivorceBeforeDeath(divorceday, deathday):
     if isinstance(divorceday, datetime.date) != True:
         #msg = "The type of birthday is not datetime"
         if isDataFormat(divorceday) == False :
-            return False
+            return True
         divorceday = datetime.datetime.strptime(divorceday, '%Y-%m-%d')
     
     if isinstance(deathday, datetime.date) != True:
         #msg = "The type of birthday is not datetime"
         if isDataFormat(deathday) == False :
-            return False
+            return True
+    
         deathday = datetime.datetime.strptime(deathday, '%Y-%m-%d')
 
     if(divorceday - deathday).total_seconds() > 0 :
-        print("ERROR: FAMILY: US06 : Divorced on "+str(divorceday)+" after death on "+str(deathday))
-    return
+        return False
+    return True
 
 def birthBFmarried(fmID, fmDay,iBirth):
     if fmDay == 'NA':
