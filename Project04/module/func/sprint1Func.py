@@ -90,7 +90,7 @@ def isDivorceBeforeDeath(divorceday, deathday):
         return False
     return True
 
-<<<<<<< HEAD:Project04/Sprint01/classModule/sprint1Func.py
+
 def US10(marriageDay, birthday):
     # US10 Check whether the individual is married after 14
     # Assume temporarily that this function will be call twice. (husband and wife)
@@ -120,19 +120,6 @@ def US15(children):
     return True
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 def birthBFmarried(fmID, fmDay,iBirth):
     if fmDay == 'NA':
         return False
@@ -144,7 +131,7 @@ def birthBFmarried(fmID, fmDay,iBirth):
     if (birth - marrDay).total_seconds() > 0:
         print(f"ERROR: FAMILY: {ID} US02: Birth day '{birth}' after Married day: '{marrDay}'")
         return False
-=======
+
 def isbirthBFmarried(fmID, fmDay,iBirth):
     if fmDay != 'NA': 
         birth = datetime.datetime.strptime(iBirth, "%Y-%m-%d").date()
@@ -156,7 +143,7 @@ def isbirthBFmarried(fmID, fmDay,iBirth):
         else:
             #print(f"FAMILY: US02: {ID} married day '{marrDay}' is valid")
             return True
->>>>>>> master:Project04/module/func/sprint1Func.py
+
     else:
         print(f"No Married date provided!")
         return
