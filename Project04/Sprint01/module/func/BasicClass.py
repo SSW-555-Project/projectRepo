@@ -1,3 +1,5 @@
+import datetime
+
 class Families:
     def __init__(self, ID):
         self.ID = ID
@@ -21,6 +23,29 @@ class Individuals: #
         self.Death = "NA"
         self.Child = "None"
         self.Spouse = "NA"
+
+    def isDateTimeForm(self, _str):
+        if isinstance(_str, str) == True and len(_str.split('-')) == 3:
+            year, month, day = _str.split('-')
+            if int(month) > 12:
+                return False
+            if int(day) > 31:
+                return False
+            
+            if day[:].isdigit() and month.isdigit() and year.isdigit(): 
+                return True
+            else:
+                return False
+        else:
+            return False
+
+    def str2DateTimeForm(self, _str):
+        if self.isDateTimeForm(_str):
+            return datetime.datetime.strptime(_str, '%Y-%m-%d')
+        return None
+    
+    def getDT_Birthday(self):
+        return self.str2DateTimeForm(self.Birthday)
 
 
 def OrderById(inputLst):
