@@ -91,33 +91,7 @@ def isDivorceBeforeDeath(divorceday, deathday):
     return True
 
 
-def US10(marriageDay, birthday):
-    # US10 Check whether the individual is married after 14
-    # Assume temporarily that this function will be call twice. (husband and wife)
-    
-    if isinstance(marriageDay, datetime.date) != True:
-        #msg = "The type of birthday is not datetime"
-        if isDataFormat(marriageDay) == False :
-            return True
-        marriageDay = datetime.datetime.strptime(marriageDay, '%Y-%m-%d')
-    
-    if isinstance(birthday, datetime.date) != True:
-        #msg = "The type of birthday is not datetime"
-        if isDataFormat(birthday) == False :
-            return True
-    
-        birthday = datetime.datetime.strptime(birthday, '%Y-%m-%d')
 
-    if ((marriageDay - birthday).days)/365 < 14 :
-        return False
-    return True
-
-
-def US15(children):
-    # US15 Check whether the family has fewer than 15 siblings
-    if len(children)>=15:
-        return False
-    return True
 
 
 def birthBFmarried(fmID, fmDay,iBirth):
@@ -129,7 +103,7 @@ def birthBFmarried(fmID, fmDay,iBirth):
     ID = fmID
     
     if (birth - marrDay).total_seconds() > 0:
-        print(f"ERROR: FAMILY: {ID} US02: Birth day '{birth}' after Married day: '{marrDay}'")
+        print("ERROR: FAMILY: {ID} US02: Birth day '{birth}' after Married day: '{marrDay}'")
         return False
 
 def isbirthBFmarried(fmID, fmDay,iBirth):
@@ -145,7 +119,7 @@ def isbirthBFmarried(fmID, fmDay,iBirth):
             return True
 
     else:
-        print(f"No Married date provided!")
+        print("No Married date provided!")
         return
 
 

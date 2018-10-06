@@ -25,25 +25,4 @@ Families
 | F4 | 1940-04-04 | 1930-05-07 |     I7     |    Fa /Pitt/    |    I8   |    Mo /Pitt/     |        ['I5']       |
 | F5 | 2007-03-02 |     NA     |    I10     | Derrick /Smith/ |   I12   |    Ann /Hong/    |          []         |
 +----+------------+------------+------------+-----------------+---------+------------------+---------------------+
-ERROR: INDIVIDUAL: US03:I2: 1960-09-23 Birth before death NA
-ERROR: INDIVIDUAL: US03:I3: 1981-02-13 Birth before death NA
-ERROR: INDIVIDUAL: US03:I4: 1983-06-02 Birth before death NA
-ERROR: INDIVIDUAL: US03:I5: 1930-01-01 Birth before death NA
-ERROR: INDIVIDUAL: US01: Date: 2019-04-01 is not before current time.ERROR: INDIVIDUAL: US03:I7: 1800-03-09 Birth before death NA
-ERROR: INDIVIDUAL: US03:I8: 1950-03-06 Birth before death NA
-ERROR: INDIVIDUAL: US03:I10: 1986-11-05 Birth before death NA
-ERROR: INDIVIDUAL: US01: Date: 2020-07-06 is not before current time.ERROR: INDIVIDUAL: US03:I11: 2020-07-06 Birth before death NA
-ERROR: INDIVIDUAL: US03:I12: 2006-04-03 Birth before death NA
-ERROR: FAMILY: US05:I2: NA Marriage before death NA
-ERROR: INDIVIDUAL: US08:I10: 1986-11-05 Birth after parents divorced 1985-04-07
-ERROR: FAMILY: US05:I5: 2017-04-05 Marriage before death NA
-ERROR: INDIVIDUAL: US01: Date: 2019-05-01 is not before current time.ERROR: FAMILY: US06:I6: 2019-05-01 Divorce after death 2019-04-01
-ERROR: INDIVIDUAL: US08:I2: 1960-09-23 Birth before parents marriage 2017-04-05
-ERROR: FAMILY: US05:I5: 2014-10-08 Marriage before death NA
-ERROR: INDIVIDUAL: US08:I11: 2020-07-06 Birth after parents divorced 2016-09-04
-ERROR: FAMILY: US05:I7: 1940-04-04 Marriage before death NA
-ERROR: FAMILY: US05:I8: NA Marriage before death NA
-ERROR: FAMILY: US04:F4: Marriage 1940-04-04 after divorce 1930-05-07
-ERROR: INDIVIDUAL: US08:I5: 1930-01-01 Birth before parents marriage 1940-04-04
-ERROR: FAMILY: US05:I10: 2007-03-02 Marriage before death NA
-ERROR: FAMILY: US05:I12: NA Marriage before death NA
+ERROR: FAMILY: US10:I8: Married on 1940-04-04 before she was 14ERROR: FAMILY: US10:I12: Married on 2007-03-02 before she was 14

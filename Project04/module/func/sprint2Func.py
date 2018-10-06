@@ -4,7 +4,21 @@ import datetime
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from func.BasicClass import *
-
+def isDataFormat(date):
+    if isinstance(date, str) == True and len(date.split('-')) == 3:
+        year, month, day = date.split('-')
+        if int(month) > 12:
+            return False
+        
+        if int(day) > 31:
+            return False
+        
+        if day[:].isdigit() and month.isdigit() and year.isdigit(): 
+            return True
+        else:
+            return False
+    else:
+        return False
 def isMaleLastNames(fInfo, ilist):
 
     familyLastName = getItemByID(ilist, fInfo.HusbandID).Name.split("/")[-2]
