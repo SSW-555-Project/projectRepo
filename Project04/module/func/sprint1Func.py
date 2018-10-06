@@ -90,6 +90,7 @@ def isDivorceBeforeDeath(divorceday, deathday):
         return False
     return True
 
+<<<<<<< HEAD:Project04/Sprint01/classModule/sprint1Func.py
 def US10(marriageDay, birthday):
     # US10 Check whether the individual is married after 14
     # Assume temporarily that this function will be call twice. (husband and wife)
@@ -143,25 +144,38 @@ def birthBFmarried(fmID, fmDay,iBirth):
     if (birth - marrDay).total_seconds() > 0:
         print(f"ERROR: FAMILY: {ID} US02: Birth day '{birth}' after Married day: '{marrDay}'")
         return False
-    else:
-        print(f"FAMILY: US02: {ID} married day '{marrDay}' is valid")
-        return True
-    
-def ageLess150(indi):
-    if  indi == None:
-        print("No individual can be tested")
-        return False
+=======
+def isbirthBFmarried(fmID, fmDay,iBirth):
+    if fmDay != 'NA': 
+        birth = datetime.datetime.strptime(iBirth, "%Y-%m-%d").date()
+        marrDay = datetime.datetime.strptime(fmDay, "%Y-%m-%d").date()
+        ID = fmID
 
-    else: 
+        if (birth - marrDay).total_seconds() > 0:
+            return False
+        else:
+            #print(f"FAMILY: US02: {ID} married day '{marrDay}' is valid")
+            return True
+>>>>>>> master:Project04/module/func/sprint1Func.py
+    else:
+        print(f"No Married date provided!")
+        return
+
+
+def isAgeLThen150(indi):
+    if indi != None: 
         ID = indi.ID
         Age = indi.Age
         if Age > 150:
-            #                     raise ValueError('The age is over 150!')
-            print(f"ERROR: INDIVIDUAL: US07: {ID} age '{Age}' is over 150!")
+            # raise ValueError('The age is over 150!')
             return False
         else:
-            print(f"INDIVIDUAL: US07 {ID}'s age '{Age}' is less than 150 ")
+        #print(f"INDIVIDUAL: US07 {ID}'s age '{Age}' is less than 150 ")
             return Age < 150
+    else:
+        print("No individual can be tested")
+        return
+    
 def US04(famID,Date_married,Date_divorced):
     from datetime import datetime
     if(Date_married!="NA" and Date_divorced!="NA"):
@@ -169,24 +183,37 @@ def US04(famID,Date_married,Date_divorced):
         #print(Date_divorced,Date_married)
         #print(result.days)
         if(result.days<0):
-            print("Error Family: US04 ",famID," : Marriage",Date_married, "after divorce",Date_divorced )
+            #print("==Error Family: US04 ",famID," : Marriage",Date_married, "after divorce",Date_divorced )
+            return False
         else:
-            print("Family: US04 ",famID," : Marriage",Date_married, "before divorce",Date_divorced, "is valid" )
+            #print("==Family: US04 ",famID," : Marriage",Date_married, "before divorce",Date_divorced, "is valid" )
+            return True
+    else:
+        return True
             
             
-def US08(iList,famID,ID,married_date,divorced_date):
+def US08(iList,famID,ID,married_date,divorced_date,famChild):
     from datetime import datetime
+    
     if(married_date!="NA" and divorced_date!="NA"):
         for indi in iList:
-            indiid=indi.ID
-            married_period= datetime.now()- datetime.strptime(married_date, "%Y-%m-%d")
-            indi_period= datetime.now()- datetime.strptime(indi.Birthday, "%Y-%m-%d")
-            divorced_period= datetime.now()- datetime.strptime(divorced_date, "%Y-%m-%d")
-            #print(married_period.days, indi_period.days, divorced_period.days)
-            if(indi_period.days<married_period.days and indi_period.days>=divorced_period.days-270):
-                print("Error Individual ID: US08 ",indiid,": birthday:", indi.Birthday, "is born before parents marriage: ",married_date )
-            elif(indi_period.days>=married_period.days and indi_period.days<divorced_period.days-270):
-                print("Error Individual ID: US08 ",indiid,": birthday:", indi.Birthday, "is born after parents divorced: ",divorced_date )
-            elif(indi_period.days>married_period.days and indi_period.days<divorced_period.days-270):
-                print("Error Individual ID: US08 ",indiid,": birthday:", indi.Birthday, "is born after parents divorced: "\
-                      ,divorced_date,"and also born before parents marriage : ",married_date )
+            if (indi.ID in famChild):
+                abc=""
+                indiid=indi.ID
+                married_period= datetime.now()- datetime.strptime(married_date, "%Y-%m-%d")
+                indi_period= datetime.now()- datetime.strptime(indi.Birthday, "%Y-%m-%d")
+                divorced_period= datetime.now()- datetime.strptime(divorced_date, "%Y-%m-%d")
+                #print("Take a look",married_period.days, indi_period.days, divorced_period.days)
+                if(indi_period.days>married_period.days and indi_period.days>=divorced_period.days-270):
+                    abc="ERROR: INDIVIDUAL: US08:{0}: {1} Birth before parents marriage "\
+                    "{2}".format(indiid,indi.Birthday,married_date)
+                    return abc
+                elif(indi_period.days<married_period.days and indi_period.days<divorced_period.days-270):
+                    abc="ERROR: INDIVIDUAL: US08:{0}: {1} " \
+                    "Birth after parents divorced {2}".format(indiid,indi.Birthday,divorced_date)
+                    return abc
+                elif(indi_period.days>married_period.days and indi_period.days<divorced_period.days-270):
+                    abc="ERROR: INDIVIDUAL: US08:{0}: {1} "\
+                    "Birth after parents divorced {2} and before parents marriage "\
+                    "{3}".format(indiid,indi.Birthday,divorced_date,married_date)
+                    return abc
