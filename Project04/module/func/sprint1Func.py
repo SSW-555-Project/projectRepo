@@ -1,6 +1,6 @@
 import datetime
 
-def isDataFormat(date):
+def isStrDataFormat(date):
     if isinstance(date, str) == True and len(date.split('-')) == 3:
         year, month, day = date.split('-')
         if int(month) > 12:
@@ -16,50 +16,64 @@ def isDataFormat(date):
     else:
         return False
 
-def isBirthBeforeDeath(birthday, deathday):
-    # US03 Birth should occur before death of an individual
-    
-
-    if isinstance(birthday, datetime.date) != True:
-        #msg = "The type of birthday is not datetime"
-        if isDataFormat(birthday) == False :
+def checkStrDateFormat(inlst):
+    for day in inlst:
+        if isStrDataFormat(day) == False :
             return False
-        birthday = datetime.datetime.strptime(birthday, '%Y-%m-%d')
+    return True
 
-
+def checkDateFormat(day1, day2):
+    lst = [day1, day2]
+    result = []
+    flag = True
+    for day in lst:
+        if isinstance(day, datetime.date) == False :
+            if isStrDataFormat(day):
+                result.append(datetime.datetime.strptime(day, '%Y-%m-%d'))
+            else:
+                flag = False
+        else:
+            result.append(day)
+            
+    if len(result) != 2:
+        return 0, 0 , False
     
-    if isinstance(deathday, datetime.date) != True:
-        #msg = "The type of deathday is not datetime"
-        if isDataFormat(deathday) == False :
-            return False
-        deathday = datetime.datetime.strptime(deathday, '%Y-%m-%d')
-     
+    return result[0], result[1], flag
 
-    if(deathday - birthday).total_seconds() > 0 :
+def ispPositiveTimeDuration(day1, day2):
+
+    if(day1 - day2).total_seconds() > 0 :
         return True
     else:
         return False
+
+
+def isBirthBeforeDeath(birthday, deathday):
+    # US03 Birth should occur before death of an individual
+    if deathday == 'NA':
+        return True  
+
+    deathday, birthday, flag = checkDateFormat(deathday, birthday)
+    
+    if flag == False:
+        return False
+
+    return ispPositiveTimeDuration(deathday, birthday)
+
 
 def isMarriageBeforeDeath(marriageday, deathday):
     # US05 Marriage should occur before death of either spouse
     # Assume temporarily that this function will be call twice. (husband and wife)
+    if deathday == 'NA':
+        return True  
 
-    if isinstance(marriageday, datetime.date) != True:
-        #msg = "The type of birthday is not datetime"
-        if isDataFormat(marriageday) == False :
-            return False
-        marriageday = datetime.datetime.strptime(marriageday, '%Y-%m-%d')
+    deathday, marriageday, flag = checkDateFormat(deathday, marriageday)
     
-    if isinstance(deathday, datetime.date) != True:
-        #msg = "The type of birthday is not datetime"
-        if isDataFormat(deathday) == False :
-            return False
-        deathday = datetime.datetime.strptime(deathday, '%Y-%m-%d')
-
-    if(deathday - marriageday).total_seconds() > 0 :
-        return True
-    else:
+    if flag == False:
         return False
+
+    return ispPositiveTimeDuration(deathday, marriageday)
+
 def isDateBeforeCur(day):
     # US01 Every dates should be earlier before current date
     if day!='NA':
@@ -75,13 +89,13 @@ def isDivorceBeforeDeath(divorceday, deathday):
 
     if isinstance(divorceday, datetime.date) != True:
         #msg = "The type of birthday is not datetime"
-        if isDataFormat(divorceday) == False :
+        if isStrDataFormat(divorceday) == False :
             return True
         divorceday = datetime.datetime.strptime(divorceday, '%Y-%m-%d')
     
     if isinstance(deathday, datetime.date) != True:
         #msg = "The type of birthday is not datetime"
-        if isDataFormat(deathday) == False :
+        if isStrDataFormat(deathday) == False :
             return True
     
         deathday = datetime.datetime.strptime(deathday, '%Y-%m-%d')

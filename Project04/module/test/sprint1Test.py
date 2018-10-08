@@ -25,6 +25,7 @@ class TestSprint1Func(unittest.TestCase):
         self.assertFalse(isBirthBeforeDeath(deathDay, birthDay))
         self.assertFalse(isBirthBeforeDeath("deathDay", birthDay))
         self.assertFalse(isBirthBeforeDeath(deathDay, "birthDay"))
+        self.assertTrue(isBirthBeforeDeath(birthDay, "NA"))
 
     def test_isMarriageBeforeDeath(self):
         """Test method isisMarriageBeforeDeath(marriageDay, deathDay)"""
@@ -39,6 +40,7 @@ class TestSprint1Func(unittest.TestCase):
         self.assertFalse(isMarriageBeforeDeath(deathDay, marriageDay))
         self.assertFalse(isMarriageBeforeDeath(123, nowDay))
         self.assertFalse(isMarriageBeforeDeath(nowDay, [123, 45]))
+        self.assertTrue(isMarriageBeforeDeath(marriageDay, "NA"))
 
 
 if __name__ == '__main__':
