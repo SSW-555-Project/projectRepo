@@ -48,6 +48,10 @@ class TestSprint2Func(unittest.TestCase):
         # test case 01
         for fm in flist:
             self.assertTrue(isMaleLastNames(fm, ilist))
+    def test_US15(self):
+        ilist, flist = load_data('UserStory.ged')
+        for fm in flist:
+            self.assertTrue(US15(fm.Children))
     def test_US10(self):
         ilist, flist = load_data('UserStory.ged')
         for fm in flist:
@@ -55,11 +59,9 @@ class TestSprint2Func(unittest.TestCase):
             cWife = getItemByID(ilist, fInfo.WifeID)
             self.assertTrue(US10(fm.Married,cHusband.Birthday)
             self.assertTrue(US10(fm.Married,cWife.Birthday)                
-    def test_US15(self):
-        ilist, flist = load_data('UserStory.ged')
-        for fm in flist:
-            self.assertTrue(US15(fm.Children))
 
+# if __name__ == '__main__': 
+#     unittest.main() 
 
 if __name__ == '__main__':
     suite = unittest.TestSuite()
