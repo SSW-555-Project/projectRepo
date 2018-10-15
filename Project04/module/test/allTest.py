@@ -17,7 +17,8 @@ if __name__ == '__main__':
     tests = [TestSprint1Func("test_isBirthBeforeDeath"), TestSprint1Func("test_isMarriageBeforeDeath"),TestSprint1Func("test_isDateBeforeCur"),TestSprint1Func("test_isDivorceBeforeDeath")]
     suite.addTests(tests)
 
-    tests = [TestSprint2Func("test_isMaleLastNames"), TestSprint2Func("test_isParentsNotTooOld"),TestSprint2Func("test_US10"),TestSprint2Func("test_US15")]
+    tests = [TestSprint2Func("test_isMaleLastNames"), TestSprint2Func("test_isParentsNotTooOld"),TestSprint2Func("test_US10"),TestSprint2Func("test_US15"), TestSprint2Func("test_Bigamy"),
+            TestSprint2Func("test_Sibling_Spacing")]
     suite.addTests(tests)
 
    
