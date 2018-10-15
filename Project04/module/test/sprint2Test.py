@@ -49,11 +49,11 @@ class TestSprint2Func(unittest.TestCase):
         for fm in flist:
             self.assertTrue(isMaleLastNames(fm, ilist))
     def test_US15(self):
-        ilist, flist = load_data('UserStory.ged')
+        ilist, flist = load_data('MySample01.ged')
         for fm in flist:
             self.assertTrue(US15(fm.Children))
     def test_US10(self):
-        ilist, flist = load_data('UserStory.ged')
+        ilist, flist = load_data('MySample01.ged')
         for fm in flist:
             cHusband = getItemByID(ilist, fm.HusbandID)
             cWife = getItemByID(ilist, fm.WifeID)
@@ -61,7 +61,7 @@ class TestSprint2Func(unittest.TestCase):
             self.assertTrue(US10(fm.Married,cWife.Birthday))    
     #US11:
     def test_Bigamy(self):
-        ilist, flist = load_data('UserStory_02.ged')
+        ilist, flist = load_data('UserStory.ged')
         Bigamy_info = {}
         for fm in flist:
             inf = [fm.Married, fm.Divorced, fm.HusbandID, fm.WifeID]
@@ -70,7 +70,7 @@ class TestSprint2Func(unittest.TestCase):
     #US13:
     def test_Sibling_Spacing(self):
         """Test US13_Sibling_Spacing(fm, individualList)"""
-        ilist, flist = load_data('UserStory_02.ged')
+        ilist, flist = load_data('UserStory.ged')
         
         for fm in flist:
             self.assertTrue(US13_Sibling_Spacing(fm, ilist))
