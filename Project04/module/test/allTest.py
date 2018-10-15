@@ -14,11 +14,13 @@ if __name__ == '__main__':
     
     suite = unittest.TestSuite()
 
-    tests = [TestSprint1Func("test_isBirthBeforeDeath"), TestSprint1Func("test_isMarriageBeforeDeath")]
+    tests = [TestSprint1Func("test_isBirthBeforeDeath"), TestSprint1Func("test_isMarriageBeforeDeath"),TestSprint1Func("test_isDateBeforeCur"),TestSprint1Func("test_isDivorceBeforeDeath")]
     suite.addTests(tests)
 
-    tests = [TestSprint2Func("test_isMaleLastNames"), TestSprint2Func("test_isParentsNotTooOld")]
+    tests = [TestSprint2Func("test_isMaleLastNames"), TestSprint2Func("test_isParentsNotTooOld"),TestSprint2Func("test_US10"),TestSprint2Func("test_US15")]
     suite.addTests(tests)
+
+   
 
     runner = unittest.TextTestRunner(verbosity=2)
     runner.run(suite)

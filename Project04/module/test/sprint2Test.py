@@ -57,11 +57,10 @@ class TestSprint2Func(unittest.TestCase):
         for fm in flist:
             cHusband = getItemByID(ilist, fInfo.HusbandID)
             cWife = getItemByID(ilist, fInfo.WifeID)
-            self.assertTrue(US10(fm.Married,cHusband.Birthday)
-            self.assertTrue(US10(fm.Married,cWife.Birthday)                
+            self.assertTrue(US10(fm.Married,cHusband.Birthday))
+            self.assertTrue(US10(fm.Married,cWife.Birthday))            
 
-# if __name__ == '__main__': 
-#     unittest.main() 
+
 
 if __name__ == '__main__':
     suite = unittest.TestSuite()

@@ -42,6 +42,13 @@ class TestSprint1Func(unittest.TestCase):
         self.assertFalse(isMarriageBeforeDeath(nowDay, [123, 45]))
         self.assertTrue(isMarriageBeforeDeath(marriageDay, "NA"))
 
+    def test_isDateBeforeCur(self):
+        day= '2018-01-01'
+        self.assertTrue(isDateBeforeCur(day))
+    def test_isDivorceBeforeDeath(self):
+        divorceday='2018-01-01'
+        deathday='2018-03-01'
+        self.assertTrue(isDivorceBeforeDeath(divorceday,deathday))
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

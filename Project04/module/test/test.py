@@ -26,20 +26,28 @@ def load_data(file_name):
 
 
 class TestSprint2Func(unittest.TestCase):
-    def test_US15(self):
-        ilist,flist=load_data('userStory.ged')
-        for fm in flist:
-            self.assertTrue(US15(fm.Children))
-    def test_US10(self):
-        ilist, flist = load_data('userStory.ged')
-        for fm in flist:
-            cHusband = getItemByID(ilist, fInfo.HusbandID)
-            cWife = getItemByID(ilist, fInfo.WifeID)
-            self.assertTrue(US10(fm.Married,cHusband.Birthday)
+	def test_US10(self):
+		ilist,flist = load_data('ueserStory.ged')
+		for fm in flist:
+			cHusband=getItemByID(ilist,fInfo.HusbandID)
+			cWife=getItemByID(ilist,fInfo.WifeID)
+			self.assertTrue(US10(fm.Married,cHusband.Birthday))
+    
+    # def test_US15(self):
+    #     ilist,flist=load_data('userStory.ged')
+    #     for fm in flist:
+    #         self.assertTrue(US15(fm.Children))
+    # def test_US10(self):
+    #     ilist, flist = load_data('userStory.ged')
+    #     for fm in flist:
+    #         cHusband = getItemByID(ilist, fInfo.HusbandID)
+    #         cWife = getItemByID(ilist, fInfo.WifeID)
+    #         self.assertTrue(US10(fm.Married,cHusband.Birthday)
                            
 
 
 if __name__ == '__main__':
     unittest.main() 
+
 
 
