@@ -49,14 +49,14 @@ class TestSprint2Func(unittest.TestCase):
         for fm in flist:
             self.assertTrue(isMaleLastNames(fm, ilist))
     def test_US15(self):
-        ilist, flist = load_data('UserStory.ged')
+        ilist, flist = load_data('MySample01.ged')
         for fm in flist:
             self.assertTrue(US15(fm.Children))
     def test_US10(self):
-        ilist, flist = load_data('UserStory.ged')
+        ilist, flist = load_data('MySample01.ged')
         for fm in flist:
-            cHusband = getItemByID(ilist, fInfo.HusbandID)
-            cWife = getItemByID(ilist, fInfo.WifeID)
+            cHusband = getItemByID(ilist, fm.HusbandID)
+            cWife = getItemByID(ilist, fm.WifeID)
             self.assertTrue(US10(fm.Married,cHusband.Birthday))
             self.assertTrue(US10(fm.Married,cWife.Birthday))            
 
