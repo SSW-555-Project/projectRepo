@@ -49,13 +49,51 @@ Families
 | F6 | 1980-06-03 |     NA     |    I19     |   Lala /Pitt/   |   I20   |   Haha /Pitt/    |                                                  ['I8', 'I21']                                                   |
 | F7 | 2007-03-02 |     NA     |    I10     | Derrick /Smith/ |   I12   |    Ann /Hong/    | ['I13', 'I14', 'I15', 'I16', 'I17', 'I18', 'I25', 'I26', 'I27', 'I28', 'I29', 'I30', 'I31', 'I32', 'I33', 'I34'] |
 +----+------------+------------+------------+-----------------+---------+------------------+------------------------------------------------------------------------------------------------------------------+
-ERROR: INDIVIDUAL: US01: Date: 2019-04-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2020-07-06 is not before current time.ERROR: INDIVIDUAL: US03:I11: 2020-07-06 Birth before death 2000-02-07
-ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2030-01-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2300-08-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2200-11-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2020-02-19 is not before current time.ERROR: INDIVIDUAL: US08:I10: 1986-11-05 Birth after parents divorced 1985-04-07
-ERROR: INDIVIDUAL: US01: Date: 2019-05-01 is not before current time.ERROR: INDIVIDUAL: US08:I2: 1960-09-23 Birth before parents marriage 2017-04-05
+ERROR: INDIVIDUAL: US01: Date: 2019-04-01 is not before current time.
+ERROR: INDIVIDUAL: US07: I7 age 218 is over 150!
+ERROR: INDIVIDUAL: US01: Date: 2020-07-06 is not before current time.
+ERROR: INDIVIDUAL: US03:I11: 2020-07-06 Birth before death 2000-02-07
+ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.
+ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.
+ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.
+ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.
+ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.
+ERROR: INDIVIDUAL: US01: Date: 2030-01-01 is not before current time.
+ERROR: INDIVIDUAL: US01: Date: 2300-08-01 is not before current time.
+ERROR: INDIVIDUAL: US01: Date: 2200-11-01 is not before current time.
+ERROR: INDIVIDUAL: US01: Date: 2020-02-19 is not before current time.
+ERROR: INDIVIDUAL: US07: I24 age 218 is over 150!
+ERROR: INDIVIDUAL: US08:I10: 1986-11-05 Birth after parents divorced 1985-04-07
+ERROR: INDIVIDUAL: US01: Date: 2019-05-01 is not before current time.
+ERROR: INDIVIDUAL: US08:I2: 1960-09-23 Birth before parents marriage 2017-04-05
 ERROR: INDIVIDUAL: US08:I11: 2020-07-06 Birth after parents divorced 2016-09-04
 ERROR: INDIVIDUAL: US08:I5: 1930-01-01 Birth before parents marriage 1940-04-04
 ERROR: FAMILY: US06:I6: 2019-05-01 Divorce after death 2019-04-01
+ERROR: FAMILY: US13: F2: Siblings Spacing between I2 and I23 is Wrong!
 ERROR: FAMILY: US06:I9: 2016-09-04 Divorce after death 2011-09-04
 ERROR: FAMILY: US05:I9: 2011-09-04 Marriage before death 2011-09-04
+ERROR: FAMILY: US13: F3: Siblings Spacing between I11 and I22 is Wrong!
+ERROR: FAMILY: US02:F4: I8 Birth day 1950-03-06 after Married day: 1940-04-04
 ERROR: FAMILY: US04:F4: Marriage 1940-04-04 after divorce 1930-05-07
+ERROR: FAMILY: US02:F5: I8 Birth day 1950-03-06 after Married day: 1929-04-09
+ERROR: FAMILY: US02:F6: I20 Birth day 2200-11-01 after Married day: 1980-06-03
+ERROR: FAMILY: US10:I12: Married on 2007-03-02 before she was 14
 ERROR: FAMILY: US15:F7: Siblings not fewer than 15.
+ERROR: FAMILY: US13: F7: Siblings Spacing between I25 and I26 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I25 and I27 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I25 and I28 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I25 and I29 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I25 and I31 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I26 and I27 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I26 and I28 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I26 and I29 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I26 and I31 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I27 and I28 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I27 and I29 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I27 and I31 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I28 and I31 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I29 and I31 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I30 and I32 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I30 and I33 is Wrong!
+ERROR: FAMILY: US13: F7: Siblings Spacing between I32 and I33 is Wrong!
+ERROR: FAMILY: US11: F4 and F5: individual ID: I8 Bigamy!
