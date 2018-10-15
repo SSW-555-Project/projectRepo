@@ -74,7 +74,19 @@ class TestSprint2Func(unittest.TestCase):
         
         for fm in flist:
             self.assertTrue(US13_Sibling_Spacing(fm, ilist))
-
+    def test_us09(self):
+        ilist, flist = load_data()
+        
+        for fm in flist:
+            a,b=US09(fm.HusbandID, fm.WifeID, fm.Children, individualList)
+            self.assertTrue(a)
+    
+    def test_us14(self):
+        ilist, flist = load_data()
+        
+        for fm in flist:
+            a,b=US14(fm.Children, fm.ID, individualList)
+            self.assertTrue(a)
 
 
 if __name__ == '__main__':
@@ -85,4 +97,3 @@ if __name__ == '__main__':
 
     runner = unittest.TextTestRunner(verbosity=2)
     runner.run(suite)
-
