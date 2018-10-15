@@ -163,8 +163,9 @@ def US14(fmchild, fmid, individualList):
     return flag,stri
 
 
-from datetime import datetime
+
 def US09(fHusbandID, fWifeID, fchildID, individualList):
+    from datetime import datetime
     re_list=[]
     s=""
     flag=True

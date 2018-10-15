@@ -76,3 +76,6 @@ ERROR: FAMILY: US13: F7: Siblings Spacing between I30 and I32 is Wrong!
 ERROR: FAMILY: US13: F7: Siblings Spacing between I30 and I33 is Wrong!
 ERROR: FAMILY: US13: F7: Siblings Spacing between I32 and I33 is Wrong!
 ERROR: FAMILY: US11: F4 and F5: individual ID: I8 Bigamy!
+ERROR: INDIVIDUAL: US09:I9 died 2011-09-04 before children birth 2020-07-06
+ERROR: INDIVIDUAL: US09:I9 died 2011-09-04 before children birth 2020-02-19
+ERROR: FAMILY: US14:F7 5 siblings were born at the same time

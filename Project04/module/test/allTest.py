@@ -18,7 +18,7 @@ if __name__ == '__main__':
     suite.addTests(tests)
 
     tests = [TestSprint2Func("test_isMaleLastNames"), TestSprint2Func("test_isParentsNotTooOld"),TestSprint2Func("test_US10"),TestSprint2Func("test_US15"), TestSprint2Func("test_Bigamy"),
-            TestSprint2Func("test_Sibling_Spacing")]
+            TestSprint2Func("test_Sibling_Spacing"), TestSprint2Func("test_us09"), TestSprint2Func("test_us14")]
     suite.addTests(tests)
 
    
