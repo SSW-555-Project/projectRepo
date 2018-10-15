@@ -58,3 +58,71 @@ def US15(children):
         return False
     return True
 
+
+def US11_noBigamy(info):    
+    Info = sorted(info.items(), key=lambda x: x[1][0])
+    for i in range(len(Info)):
+        earlier_fmID = Info[i][0]
+    #     print(earlier_fmID)
+        earlier_HusID = Info[i][1][2]
+        earlier_WifeID = Info[i][1][3]
+        earlier_Married = datetime.datetime.strptime(Info[i][1][0], "%Y-%m-%d").date()
+        if Info[i][1][1] == 'NA':
+            earlier_Divorced = datetime.datetime.now().date()
+        else:
+            earlier_Divorced = datetime.datetime.strptime(Info[i][1][1], "%Y-%m-%d").date()
+        for j in range(i+1, len(Info)):
+            laterInfo = Info[j]
+            later_fmID = laterInfo[0]
+            later_HusID = laterInfo[1][2]
+            later_WifeID = laterInfo[1][3]
+            later_Married = datetime.datetime.strptime(laterInfo[1][0], "%Y-%m-%d").date()
+            if laterInfo[1][1] == 'NA':
+                later_Divorced = datetime.datetime.now().date()
+            else:
+                later_Divorced = datetime.datetime.strptime(laterInfo[1][1], "%Y-%m-%d").date()
+            if later_Married < earlier_Divorced and earlier_HusID == later_HusID:
+                FalseList = [False, earlier_HusID, later_Married, earlier_Divorced]
+                yield(FalseList)
+                continue
+            elif later_Married < earlier_Divorced and earlier_WifeID == later_WifeID:
+                FalseList = [False,later_fmID, earlier_fmID, earlier_WifeID, later_Married, earlier_Divorced]
+                yield(FalseList)
+                continue
+            else:
+                TrueList = [True]
+                yield(TrueList)
+                continue
+
+
+
+def US13_Sibling_Spacing(fm, indiList):
+    siblings = fm.Children
+    month8 = datetime.timedelta(days=365) * 8 / 12
+    days2 = datetime.timedelta(days=2)
+    
+    if len(siblings) >=1 :
+        for i in range(len(siblings)):
+            for j in range(i + 1, len(siblings)):
+                A = siblings[i]
+                B = siblings[j]
+                birthA = datetime.datetime.strptime(getItemByID(indiList,A).Birthday, "%Y-%m-%d").date()
+                birthB = datetime.datetime.strptime(getItemByID(indiList,B).Birthday, "%Y-%m-%d").date()
+                interval = abs(birthA-birthB)
+                if interval > month8 or interval < days2:
+                    returnList = [True]
+            
+                  #"""Using yield so that can return every time in second loop"""
+                    yield(returnList)
+                    continue
+                    
+                else:             
+                    returnList = [False, A, B]
+                    yield(returnList)
+                    continue
+                    
+
+    
+
+
+

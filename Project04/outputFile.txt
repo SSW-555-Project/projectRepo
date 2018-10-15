@@ -1,32 +1,46 @@
 Individuals
-+-----+------------------+--------+------------+-----+-------+------------+-------+--------+
-|  ID |       Name       | Gender |  Birthday  | Age | Alive |   Death    | Child | Spouse |
-+-----+------------------+--------+------------+-----+-------+------------+-------+--------+
-|  I1 |   Joe /Smith/    |   M    | 1960-07-15 |  53 | False | 2013-12-31 |  None |   F1   |
-|  I2 | Jennifer /Smith/ |   F    | 1960-09-23 |  58 |  True |     NA     |   F2  |   F1   |
-|  I3 |   Dick /Smith/   |   M    | 1981-02-13 |  37 |  True |     NA     |   F1  |   NA   |
-|  I4 |   Jane /Smith/   |   F    | 1983-06-02 |  35 |  True |     NA     |   F1  |   NA   |
-|  I5 |   Brat /Pitt/    |   M    | 1930-01-01 |  88 |  True |     NA     |   F4  |   F3   |
-|  I6 |   Becky /Pitt/   |   F    | 1930-01-23 |  89 | False | 2019-04-01 |  None |   F2   |
-|  I7 |    Fa /Pitt/     |   M    | 1800-03-09 | 218 |  True |     NA     |  None |   F4   |
-|  I8 |    Mo /Pitt/     |   F    | 1950-03-06 |  68 |  True |     NA     |  None |   F4   |
-|  I9 |  Britney /Liu/   |   F    | 1998-04-09 |  13 | False | 2011-09-04 |  None |   F3   |
-| I10 | Derrick /Smith/  |   M    | 1986-11-05 |  31 |  True |     NA     |   F1  |   F5   |
-| I11 |   Death /Pitt/   |   F    | 2020-07-06 | -20 | False | 2000-02-07 |   F3  |   NA   |
-| I12 |    Ann /Hong/    |   F    | 2006-04-03 |  12 |  True |     NA     |  None |   F5   |
-+-----+------------------+--------+------------+-----+-------+------------+-------+--------+
++-----+------------------+--------+------------+------+-------+------------+-------+--------+
+|  ID |       Name       | Gender |  Birthday  | Age  | Alive |   Death    | Child | Spouse |
++-----+------------------+--------+------------+------+-------+------------+-------+--------+
+|  I1 |   Joe /Smith/    |   M    | 1960-07-15 |  58  |  True |     NA     |  None |   F1   |
+|  I2 | Jennifer /Smith/ |   F    | 1960-09-23 |  58  |  True |     NA     |   F2  |   F1   |
+|  I3 |   Dick /Smith/   |   M    | 1981-02-13 |  37  |  True |     NA     |   F1  |   NA   |
+|  I4 |   Jane /Smith/   |   F    | 1983-06-02 |  35  |  True |     NA     |   F1  |   NA   |
+|  I5 |   Brat /Pitt/    |   M    | 1930-01-01 |  88  |  True |     NA     |   F4  |   F3   |
+|  I6 |   Becky /Pitt/   |   F    | 1930-01-23 |  89  | False | 2019-04-01 |  None |   F2   |
+|  I7 |    Fa /Pitt/     |   M    | 1800-03-09 | 218  |  True |     NA     |  None |   F4   |
+|  I8 |    Mo /Pitt/     |   F    | 1950-03-06 |  68  |  True |     NA     |   F6  |   F5   |
+|  I9 |  Britney /Liu/   |   F    | 1998-04-09 |  13  | False | 2011-09-04 |  None |   F3   |
+| I10 | Derrick /Smith/  |   M    | 1986-11-05 |  31  |  True |     NA     |   F1  |   F7   |
+| I11 |   Death /Pitt/   |   F    | 2020-07-06 | -20  | False | 2000-02-07 |   F3  |   NA   |
+| I12 |    Ann /Hong/    |   F    | 2006-04-03 |  12  |  True |     NA     |  None |   F7   |
+| I13 |   Aaa /Smith/    |   M    | 2020-01-01 |  -1  |  True |     NA     |   F7  |   NA   |
+| I14 |   Bbb /Smith/    |   F    | 2020-01-01 |  -1  |  True |     NA     |   F7  |   NA   |
+| I15 |   Ccc /Smith/    |   M    | 2020-01-01 |  -1  |  True |     NA     |   F7  |   NA   |
+| I16 |   Ddd /Smith/    |   F    | 2020-01-01 |  -1  |  True |     NA     |   F7  |   NA   |
+| I17 |   Eee /Smith/    |   M    | 2020-01-01 |  -1  |  True |     NA     |   F7  |   NA   |
+| I18 | Youngest /Smith/ |   F    | 2030-01-01 | -11  |  True |     NA     |   F7  |   NA   |
+| I19 |   Lala /Pitt/    |   M    | 2300-08-01 | -281 |  True |     NA     |  None |   F6   |
+| I20 |   Haha /Pitt/    |   F    | 2200-11-01 | -182 |  True |     NA     |  None |   F6   |
+| I21 |    Mac /Pitx/    |   M    | 1987-08-13 |  31  |  True |     NA     |   F6  |   NA   |
+| I22 | Life Pitt /Pitt/ |   M    | 2020-02-19 |  -1  |  True |     NA     |   F3  |   NA   |
+| I23 |   Holy /Smith/   |   M    | 1960-09-09 |  58  |  True |     NA     |   F2  |   NA   |
+| I24 |    Fa /Pitt/     |   M    | 1800-03-09 | 218  |  True |     NA     |  None |   F5   |
++-----+------------------+--------+------------+------+-------+------------+-------+--------+
 Families
-+----+------------+------------+------------+-----------------+---------+------------------+---------------------+
-| ID |  Married   |  Divorced  | Husband ID |   Husband Name  | Wife ID |    Wife Name     |       Children      |
-+----+------------+------------+------------+-----------------+---------+------------------+---------------------+
-| F1 | 1980-04-11 | 1985-04-07 |     I1     |   Joe /Smith/   |    I2   | Jennifer /Smith/ | ['I3', 'I4', 'I10'] |
-| F2 | 2017-04-05 | 2019-05-01 |     I5     |   Brat /Pitt/   |    I6   |   Becky /Pitt/   |        ['I2']       |
-| F3 | 2014-10-08 | 2016-09-04 |     I5     |   Brat /Pitt/   |    I9   |  Britney /Liu/   |       ['I11']       |
-| F4 | 1940-04-04 | 1930-05-07 |     I7     |    Fa /Pitt/    |    I8   |    Mo /Pitt/     |        ['I5']       |
-| F5 | 2007-03-02 |     NA     |    I10     | Derrick /Smith/ |   I12   |    Ann /Hong/    |          []         |
-+----+------------+------------+------------+-----------------+---------+------------------+---------------------+
++----+------------+------------+------------+-----------------+---------+------------------+--------------------------------------------+
+| ID |  Married   |  Divorced  | Husband ID |   Husband Name  | Wife ID |    Wife Name     |                  Children                  |
++----+------------+------------+------------+-----------------+---------+------------------+--------------------------------------------+
+| F1 | 1980-04-11 | 1985-04-07 |     I1     |   Joe /Smith/   |    I2   | Jennifer /Smith/ |            ['I3', 'I4', 'I10']             |
+| F2 | 2017-04-05 | 2019-05-01 |     I5     |   Brat /Pitt/   |    I6   |   Becky /Pitt/   |               ['I2', 'I23']                |
+| F3 | 2014-10-08 | 2016-09-04 |     I5     |   Brat /Pitt/   |    I9   |  Britney /Liu/   |               ['I11', 'I22']               |
+| F4 | 1940-04-04 | 1930-05-07 |     I7     |    Fa /Pitt/    |    I8   |    Mo /Pitt/     |                   ['I5']                   |
+| F5 | 1929-04-09 |     NA     |    I24     |    Fa /Pitt/    |    I8   |    Mo /Pitt/     |                     []                     |
+| F6 | 1980-06-03 |     NA     |    I19     |   Lala /Pitt/   |   I20   |   Haha /Pitt/    |               ['I8', 'I21']                |
+| F7 | 2007-03-02 |     NA     |    I10     | Derrick /Smith/ |   I12   |    Ann /Hong/    | ['I13', 'I14', 'I15', 'I16', 'I17', 'I18'] |
++----+------------+------------+------------+-----------------+---------+------------------+--------------------------------------------+
 ERROR: INDIVIDUAL: US01: Date: 2019-04-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2020-07-06 is not before current time.ERROR: INDIVIDUAL: US03:I11: 2020-07-06 Birth before death 2000-02-07
-ERROR: INDIVIDUAL: US08:I10: 1986-11-05 Birth after parents divorced 1985-04-07
+ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2030-01-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2300-08-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2200-11-01 is not before current time.ERROR: INDIVIDUAL: US01: Date: 2020-02-19 is not before current time.ERROR: INDIVIDUAL: US08:I10: 1986-11-05 Birth after parents divorced 1985-04-07
 ERROR: INDIVIDUAL: US01: Date: 2019-05-01 is not before current time.ERROR: INDIVIDUAL: US08:I2: 1960-09-23 Birth before parents marriage 2017-04-05
 ERROR: INDIVIDUAL: US08:I11: 2020-07-06 Birth after parents divorced 2016-09-04
 ERROR: INDIVIDUAL: US08:I5: 1930-01-01 Birth before parents marriage 1940-04-04
