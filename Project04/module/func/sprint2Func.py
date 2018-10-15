@@ -121,6 +121,86 @@ def US13_Sibling_Spacing(fm, indiList):
                     yield(returnList)
                     continue
                     
+def US14(fmchild, fmid, individualList):
+    from datetime import datetime
+    
+    num=0
+    count=0
+    alist=[]
+    D={}
+    flag=True
+    stri=""
+#     print(len(fmchild))
+    if(len(fmchild)>=5):
+        #print((len(fmchild)),">5")
+        for a in fmchild:
+            num+=1
+            #print(a)
+            for indi in individualList:
+                if(a==indi.ID):
+                    bir=datetime.strptime(indi.Birthday, "%Y-%m-%d")
+                    alist.append(bir)
+#             print(len(alist))
+            if(num==len(fmchild)):
+#                 print(count,num)
+                for birthday in alist:
+                    if birthday in D.keys():
+                        D[birthday]+=1
+                    else:
+                        D[birthday]=1
+#                 print(D)
+                max_v=0
+                for val in D.values():
+                    if val>max_v:
+                        max_v=val
+#                 print(max_v)
+                if (max_v>=5):
+                    stri="ERROR: FAMILY: US14:"+fmid+" "+str(max_v)+" siblings were born at the same time"
+#                     print(stri)
+                    flag=False
+#                     return stri)
+#                     return (True,stri)
+    return flag,stri
+
+
+from datetime import datetime
+def US09(fHusbandID, fWifeID, fchildID, individualList):
+    re_list=[]
+    s=""
+    flag=True
+    if(fchildID!= None):
+        dad=fHusbandID
+        mom=fWifeID
+        child=fchildID
+        for ind in individualList:
+#             print("outside : "+ind.ID)
+            if(dad==ind.ID and ind.Death!="NA"):
+#                 print("dad died "+fm.ID)
+                dadDeath=datetime.now()- datetime.strptime(ind.Death, "%Y-%m-%d")
+                for dad_c in child:
+                    for a in individualList:
+                        if (dad_c==a.ID):
+                            childBirth=a.Birthday
+                            indi_period= datetime.now()- datetime.strptime(childBirth, "%Y-%m-%d")
+                            if(dadDeath.days-indi_period.days>270):
+                                s+="ERROR: INDIVIDUAL: US09:"+dad+" died "+ind.Death+" before 9 months than children birth "+childBirth\
+                                +"\n"
+                                flag=False
+            if(mom==ind.ID and ind.Death!="NA"):
+#                 print("mom died "+fm.ID)
+                momDeath=datetime.now()- datetime.strptime(ind.Death, "%Y-%m-%d")
+                for mom_c in child:
+                    for b in individualList:
+                         if (mom_c==b.ID):
+                            childBirth=b.Birthday
+                            indi_period= datetime.now()- datetime.strptime(childBirth, "%Y-%m-%d")
+                            if(momDeath.days-indi_period.days>0):
+                                s+="ERROR: INDIVIDUAL: US09:"+mom+" died "+ind.Death+" before children birth "+childBirth\
+                                +"\n"
+                                flag=False
+                            
+    return flag,s
+                    
 
     
 
