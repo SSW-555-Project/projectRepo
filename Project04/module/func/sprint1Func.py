@@ -163,15 +163,15 @@ def US08(iList,famID,ID,married_date,divorced_date,famChild):
                 divorced_period= datetime.now()- datetime.strptime(divorced_date, "%Y-%m-%d")
                 #print("Take a look",married_period.days, indi_period.days, divorced_period.days)
                 if(indi_period.days>married_period.days and indi_period.days>=divorced_period.days-270):
-                    abc="ERROR: INDIVIDUAL: US08:{0}: {1} Birth before parents marriage "\
+                    abc="ERROR: INDIVIDUAL: US08: {0}: {1} Birth before parents marriage "\
                     "{2}".format(indiid,indi.Birthday,married_date)
                     return abc
                 elif(indi_period.days<married_period.days and indi_period.days<divorced_period.days-270):
-                    abc="ERROR: INDIVIDUAL: US08:{0}: {1} " \
+                    abc="ERROR: INDIVIDUAL: US08: {0}: {1} " \
                     "Birth after parents divorced {2}".format(indiid,indi.Birthday,divorced_date)
                     return abc
                 elif(indi_period.days>married_period.days and indi_period.days<divorced_period.days-270):
-                    abc="ERROR: INDIVIDUAL: US08:{0}: {1} "\
+                    abc="ERROR: INDIVIDUAL: US08: {0}: {1} "\
                     "Birth after parents divorced {2} and before parents marriage "\
                     "{3}".format(indiid,indi.Birthday,divorced_date,married_date)
                     return abc

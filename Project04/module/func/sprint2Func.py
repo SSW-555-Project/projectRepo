@@ -155,7 +155,7 @@ def US14(fmchild, fmid, individualList):
                         max_v=val
 #                 print(max_v)
                 if (max_v>=5):
-                    stri="ERROR: FAMILY: US14:"+fmid+" "+str(max_v)+" siblings were born at the same time"
+                    stri="ERROR: FAMILY: US14: "+fmid+" "+str(max_v)+" siblings were born at the same time"
 #                     print(stri)
                     flag=False
 #                     return stri)
@@ -184,7 +184,7 @@ def US09(fHusbandID, fWifeID, fchildID, individualList):
                             childBirth=a.Birthday
                             indi_period= datetime.now()- datetime.strptime(childBirth, "%Y-%m-%d")
                             if(dadDeath.days-indi_period.days>270):
-                                s+="ERROR: INDIVIDUAL: US09:"+dad+" died "+ind.Death+" before 9 months than children birth "+childBirth\
+                                s+="ERROR: INDIVIDUAL: US09: "+dad+" died "+ind.Death+" before 9 months than children birth "+childBirth\
                                 +"\n"
                                 flag=False
             if(mom==ind.ID and ind.Death!="NA"):
@@ -196,7 +196,7 @@ def US09(fHusbandID, fWifeID, fchildID, individualList):
                             childBirth=b.Birthday
                             indi_period= datetime.now()- datetime.strptime(childBirth, "%Y-%m-%d")
                             if(momDeath.days-indi_period.days>0):
-                                s+="ERROR: INDIVIDUAL: US09:"+mom+" died "+ind.Death+" before children birth "+childBirth\
+                                s+="ERROR: INDIVIDUAL: US09: "+mom+" died "+ind.Death+" before children birth "+childBirth\
                                 +"\n"
                                 flag=False
                             
