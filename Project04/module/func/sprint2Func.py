@@ -184,8 +184,7 @@ def US09(fHusbandID, fWifeID, fchildID, individualList):
                             childBirth=a.Birthday
                             indi_period= datetime.now()- datetime.strptime(childBirth, "%Y-%m-%d")
                             if(dadDeath.days-indi_period.days>270):
-                                s+="ERROR: INDIVIDUAL: US09: "+dad+" died "+ind.Death+" before 9 months than children birth "+childBirth\
-                                +"\n"
+                                s+="ERROR: INDIVIDUAL: US09: "+dad+" died "+ind.Death+" before 9 months than children birth "+childBirth+"\n"
                                 flag=False
             if(mom==ind.ID and ind.Death!="NA"):
 #                 print("mom died "+fm.ID)
@@ -196,8 +195,7 @@ def US09(fHusbandID, fWifeID, fchildID, individualList):
                             childBirth=b.Birthday
                             indi_period= datetime.now()- datetime.strptime(childBirth, "%Y-%m-%d")
                             if(momDeath.days-indi_period.days>0):
-                                s+="ERROR: INDIVIDUAL: US09: "+mom+" died "+ind.Death+" before children birth "+childBirth\
-                                +"\n"
+                                s+="ERROR: INDIVIDUAL: US09: "+mom+" died "+ind.Death+" before children birth "+childBirth+"\n"
                                 flag=False
                             
     return flag,s
