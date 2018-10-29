@@ -87,8 +87,17 @@ class TestSprint3Func(unittest.TestCase):
         flist[0].WifeID = "I3"
         result, msg = Is_Marriages_descendants(flist)
         self.assertFalse(result)
-            
-
+        
+    def test_US18_SiblingsNotMarry(self):
+        ilist, flist = load_data()
+        for fm in flist:
+            self.assertTrue(US18_SiblingsNotMarry(fm, flist, ilist))
+    
+    def test_US19_FirstCousinsNotMarry(self):
+        ilist, flist = load_data()
+        for fm in flist:
+            self.assertTrue(US19_FirstCousinsNotMarry(fm, flist, ilist))
+        
 if __name__ == '__main__':
     suite = unittest.TestSuite()
 
@@ -96,6 +105,9 @@ if __name__ == '__main__':
     suite.addTests(tests)
 
     tests = [TestSprint3Func("test_IsCorrectGender"),TestSprint3Func("test_Is_Marriages_descendants")]
+    suite.addTests(tests)
+    
+    tests = [TestSprint3Func("test_US18_SiblingsNotMarry"),TestSprint3Func("test_US19_FirstCousinsNotMarry")]
     suite.addTests(tests)
 
     runner = unittest.TextTestRunner(verbosity=2)

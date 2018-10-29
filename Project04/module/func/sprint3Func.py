@@ -143,3 +143,42 @@ def US23(individualDict,ID,Birthday):
             return False
     return True
 
+def US18_SiblingsNotMarry(fm, familyList, individualList):
+    Husband = getItemByID(individualList, fm.HusbandID)
+    Wife = getItemByID(individualList, fm.WifeID)
+    Hus_ChildFID = Husband.Child
+    Wife_ChildFID = Wife.Child
+    if(Hus_ChildFID != 'None' and Hus_ChildFID == Wife_ChildFID):
+        return False
+    elif(Wife_ChildFID != 'None' and Hus_ChildFID == Wife_ChildFID):
+        return False
+    else:
+        return True
+
+def US19_FirstCousinsNotMarry(fm, familyList, individualList):
+    Husband = getItemByID(individualList, fm.HusbandID)
+    Wife = getItemByID(individualList, fm.WifeID)
+    Hus_SiblingFID = Husband.Child #Husband's parents family ID
+    Wife_SiblingFID = Wife.Child #Wife's parents family ID
+    if(Hus_SiblingFID != 'None' and Wife_SiblingFID != 'None' and Hus_SiblingFID != Wife_SiblingFID):  
+        #means they both have parents,but they are not sibling (this situation would be handled in US18)
+        H_ParentInfo = getItemByID(familyList, Hus_SiblingFID)
+        W_ParentInfo = getItemByID(familyList, Wife_SiblingFID)
+        Hus_Dad = H_ParentInfo.HusbandID #Husband's Dad ID
+        Hus_DadSiblingFID = getItemByID(individualList, Hus_Dad).Child  #get Family ID which includes Husband Dad's Sibling 
+        Hus_Mom = H_ParentInfo.WifeID
+        Hus_MomSiblingFID = getItemByID(individualList, Hus_Mom).Child
+        Wife_Dad = W_ParentInfo.HusbandID
+        Wife_DadSiblingFID = getItemByID(individualList, Wife_Dad).Child
+        Wife_Mom = W_ParentInfo.WifeID
+        Wife_MomSiblingFID = getItemByID(individualList, Wife_Mom).Child
+        fmList = [Hus_DadSiblingFID, Hus_MomSiblingFID, Wife_DadSiblingFID, Wife_MomSiblingFID]
+        duplicateFid = set([x for x in fmList if x != 'None' and fmList.count(x) > 1])
+        #print(len(duplicateFid))
+        #print(duplicateFid)
+        if(len(duplicateFid) > 0):
+            result = [False, duplicateFid]
+            return result
+        else:
+            return True
+    return True
