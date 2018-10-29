@@ -22,7 +22,7 @@ Individuals
 | I18 | Youngest /Smith/ |   F    | 2030-01-01 | -11  |  True |     NA     |   F8  |   NA   |
 | I19 |   Lala /Pitt/    |   M    | 2300-08-01 | -281 |  True |     NA     |  None |   F7   |
 | I20 |   Haha /Pitt/    |   F    | 2200-11-01 | -182 |  True |     NA     |  None |   F7   |
-| I21 |    Mac /Pitx/    |   M    | 1987-08-13 |  31  |  True |     NA     |   F7  |  F15   |
+| I21 |    Mac /Pitx/    |   F    | 1987-08-13 |  31  |  True |     NA     |   F7  |  F15   |
 | I22 | Life Pitt /Pitt/ |   M    | 2020-02-19 |  -1  |  True |     NA     |   F4  |   F9   |
 | I23 |   Holy /Holy/    |   M    | 1960-09-09 |  58  |  True |     NA     |   F2  |  F10   |
 | I24 |    Fa /Pitt/     |   M    | 1800-03-09 | 218  |  True |     NA     |  None |   F5   |
@@ -68,7 +68,7 @@ Families
 | F12 | 2030-02-02 |     NA     |    I36     |   Ss /Fedcba/    |   I35   |  Sister /Pitt/   |                                                     ['I37']                                                      |
 | F13 | 2007-03-02 |     NA     |    I38     | Derrick /Smith/  |   I40   |    Ann /Hong/    |                                                        []                                                        |
 | F14 | 2040-01-05 |     NA     |    I39     |    Same /God/    |   I25   |    1 /Smith/     |                                                     ['I38']                                                      |
-| F15 | 2015-01-01 |     NA     |    I21     |    Mac /Pitx/    |   I46   |    Q1Sprint3     |                                                     ['I45']                                                      |
+| F15 | 2015-01-01 |     NA     |    I21     |    Mac /Pitx/    |   I45   |      Sprin3      |                                                     ['I45']                                                      |
 +-----+------------+------------+------------+------------------+---------+------------------+------------------------------------------------------------------------------------------------------------------+
 
 Here is Demo for Sprint1
@@ -114,7 +114,6 @@ ERROR: FAMILY: US16: Detected Family Id:F2: has the problem of male last names
 ERROR: FAMILY: US13: F2: Siblings Spacing between I2 and I23 is Wrong!
 ERROR: FAMILY: US13: F4: Siblings Spacing between I11 and I22 is Wrong!
 ERROR: FAMILY: US12: F7:  Detected Family Id:F7 parents not too old
-ERROR: FAMILY: US16: Detected Family Id:F7: has the problem of male last names
 ERROR: FAMILY: US10: I12: Married on 2007-03-02 before she was 14
 ERROR: FAMILY: US15: F8: Siblings not fewer than 15.
 ERROR: FAMILY: US13: F8: Siblings Spacing between I25 and I26 is Wrong!
@@ -139,6 +138,7 @@ ERROR: FAMILY: US10: I37: Married on 2070-03-09 before she was 14
 ERROR: FAMILY: US10: I41: Married on 1978-03-05 before she was 14
 ERROR: FAMILY: US10: I35: Married on 2030-02-02 before she was 14
 ERROR: FAMILY: US16: Detected Family Id:F14: has the problem of male last names
+ERROR: FAMILY: US10: I45: Married on 2015-01-01 before she was 14
 ERROR: FAMILY: US11: F5 and F6: INDIVIDUAL ID: I8 Bigamy!
 ERROR: INDIVIDUAL: US09: I9 died 2011-09-04 before children birth 2020-07-06
 ERROR: INDIVIDUAL: US09: I9 died 2011-09-04 before children birth 2020-02-19
@@ -146,7 +146,9 @@ ERROR: INDIVIDUAL: US09: I9 died 2011-09-04 before children birth 2018-04-06
 
 
 Here is Demo for Sprint3
-ERROR: INDIVIDUAL: US22: I24: Duplicate individual ID.ERROR: INDIVIDUAL: US22: I24: No more than one individual with the same name and birth date should appear.ERROR: FAMILY: US20: F2: cannot marry because they are nieces or nephews
+ERROR: INDIVIDUAL: US22: I24: Duplicate individual ID.
+ERROR: INDIVIDUAL: US22: I24: No more than one individual with the same name and birth date should appear.
+ERROR: FAMILY: US20: F2: cannot marry because they are nieces or nephews
 ERROR: FAMILY: US20: F7: cannot marry because they are nieces or nephews
 ERROR: FAMILY: US20: F7: cannot marry because they are nieces or nephews
 ERROR: FAMILY: US20: F4: cannot marry because they are nieces or nephews
@@ -162,3 +164,5 @@ ERROR: FAMILY: US19: F3 INDIVIDUAL: I3 and I42 are cousins as their parents are 
 ERROR: FAMILY: US18: F11 INDIVIDUAL: I28 and I29 are siblings, they can not marry
 ERROR: FAMILY: US24: F13 and F8 has the same spouses by name and the same marriage date
 ERROR: FAMILY: US24: F8 and F13 has the same spouses by name and the same marriage date
+ERROR: FAMILY: US21: Husband ID: I21 Gender is not Male
+ERROR: FAMILY: US17: F.ID(F15) Wife ID: I45 marriages to descendants 
