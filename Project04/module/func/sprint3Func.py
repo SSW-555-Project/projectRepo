@@ -23,7 +23,7 @@ def US20(WifeID, HusbandID, familyList):
                     #print("dad",wID,father)
                     #print("dad Wrong", "W:"+wID, "H:"+hID, each.ID, second.ID, "f="+father, "m="+mother)
                     #print(second.ID)
-                    s+="ERROR: FAMILY: US20: "+second.ID+": cannot marry because they are nieces or nephews" 
+                    s+="ERROR: FAMILY: US20: "+second.ID+": cannot marry because they are nieces or nephews\n" 
                     
             if mother in second.Children:
                 if hID in second.Children:
@@ -31,7 +31,7 @@ def US20(WifeID, HusbandID, familyList):
                     #print("mom",hID,mother)
                     #print("mom Wrong", "W:"+wID, "H:"+hID, each.ID, second.ID, "f="+father, "m="+mother)
                     #print(second.ID)
-                    s+="ERROR: FAMILY: US20: "+second.ID+": cannot marry because they are nieces or nephews"
+                    s+="ERROR: FAMILY: US20: "+second.ID+": cannot marry because they are nieces or nephews\n"
     return flag,s
         
 
