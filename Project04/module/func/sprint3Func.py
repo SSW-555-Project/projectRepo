@@ -128,3 +128,18 @@ def Is_Marriages_descendants(familyList):
             
     return flag,msg
 
+def US22(IDset,ID): 
+    if ID not in IDset:
+        IDset.add(ID)
+        return True
+    else:
+        return False
+
+def US23(individualDict,ID,Birthday): 
+    if ID not in individualDict:
+        individualDict[ID]=Birthday
+    else:
+        if individualDict[ID]==Birthday:
+            return False
+    return True
+

@@ -35,6 +35,7 @@ Individuals
 | I31 |    7 /Smith/     |   M    | 2010-08-07 |  8   |  True |     NA     |   F7  |   NA   |
 | I32 |    8 /Smith/     |   M    | 2011-06-05 |  7   |  True |     NA     |   F7  |   NA   |
 | I33 |    9 /Smith/     |   M    | 2011-05-06 |  7   |  True |     NA     |   F7  |   NA   |
+| I33 |  9 Wrong/Smith/  |   M    | 2011-05-06 |  7   |  True |     NA     |   F7  |   NA   |
 | I34 |    10 /Smith/    |   F    | 2012-07-07 |  6   |  True |     NA     |   F7  |   NA   |
 | I35 |  Sister /Pitt/   |   F    | 2018-04-06 |  0   |  True |     NA     |   F3  |   F9   |
 | I36 |   Ss /Fedcba/    |   M    | 2030-04-03 | -11  |  True |     NA     |  None |   F9   |
@@ -53,6 +54,7 @@ Families
 |  F4 | 1940-04-04 | 1930-05-07 |     I7     |    Fa /Pitt/     |    I8   |    Mo /Pitt/     |                                                      ['I5']                                                      |
 |  F5 | 1929-04-09 |     NA     |    I24     |    Fa /Pitt/     |    I8   |    Mo /Pitt/     |                                                        []                                                        |
 |  F6 | 1980-06-03 |     NA     |    I19     |   Lala /Pitt/    |   I20   |   Haha /Pitt/    |                                                  ['I8', 'I21']                                                   |
+|  F6 | 1980-06-03 |     NA     |    I24     |    Fa /Pitt/     |    I8   |    Mo /Pitt/     |                                                        []                                                        |
 |  F7 | 2007-03-02 |     NA     |    I10     | Derrick /Smith/  |   I12   |    Ann /Hong/    | ['I13', 'I14', 'I15', 'I16', 'I17', 'I18', 'I25', 'I26', 'I27', 'I28', 'I29', 'I30', 'I31', 'I32', 'I33', 'I34'] |
 |  F8 | 2070-03-09 |     NA     |    I22     | Life Pitt /Pitt/ |   I37   |   Small /Pitt/   |                                                        []                                                        |
 |  F9 | 2030-02-02 |     NA     |    I36     |   Ss /Fedcba/    |   I35   |  Sister /Pitt/   |                                                     ['I37']                                                      |
@@ -126,13 +128,15 @@ ERROR: FAMILY: US10: I37: Married on 2070-03-09 before she was 14
 ERROR: FAMILY: US10: I35: Married on 2030-02-02 before she was 14
 ERROR: FAMILY: US16: Detected Family Id:F11: has the problem of male last names
 ERROR: FAMILY: US11: F4 and F5: INDIVIDUAL ID: I8 Bigamy!
+ERROR: FAMILY: US11: I24 and 1980-06-03: INDIVIDUAL ID: 2018-10-29 Bigamy!
 ERROR: INDIVIDUAL: US09: I9 died 2011-09-04 before children birth 2020-07-06
 ERROR: INDIVIDUAL: US09: I9 died 2011-09-04 before children birth 2020-02-19
 ERROR: INDIVIDUAL: US09: I9 died 2011-09-04 before children birth 2018-04-06
 
 
 Here is Demo for Sprint3
-ERROR: FAMILY: US20: F3: cannot marry because they are nieces or nephews
+ERROR: INDIVIDUAL: US22: I33: Duplicate individual ID.ERROR: INDIVIDUAL: US22: I33: No more than one individual with the same name and birth date should appear.ERROR: FAMILY: US22: F6: Duplicate family ID.ERROR: FAMILY: US20: F3: cannot marry because they are nieces or nephews
 ERROR: FAMILY: US20: F3: cannot marry because they are nieces or nephews
 ERROR: FAMILY: US24: F10 and F7 has the same spouses by name and the same marriage date
 ERROR: FAMILY: US24: F7 and F10 has the same spouses by name and the same marriage date
+ERROR: FAMILY: US17: F.ID(F6) Wife ID: I8 marriages to descendants 

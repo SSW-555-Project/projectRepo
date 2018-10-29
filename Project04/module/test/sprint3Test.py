@@ -41,8 +41,22 @@ class TestSprint3Func(unittest.TestCase):
         for fm in flist:
             us24a, us24b =US24(fm.WifeName, fm.HusbandName, fm.Married, fm.ID, flist)
             self.assertTrue(us24a)
-            
-
+         
+    def test_US22(self):
+        ilist, flist = load_data()
+        IDset=set()
+        for pp in ilist:
+            result=US22(IDset,pp.ID)
+            self.assertTrue(result)
+        for fm in flist:
+            result=US22(IDset,fm.ID)
+            self.assertTrue(result)
+    def test_US23(self):
+        ilist, flist = load_data()
+        individualDict=dict()
+        for pp in ilist:
+            result=US23(individualDict,pp.ID,pp.Birthday)
+            self.assertTrue(result)
     def test_IsCorrectGender(self):
         """Test method IsCorrectGender(wID, hID, individualList)"""
         
@@ -78,7 +92,7 @@ class TestSprint3Func(unittest.TestCase):
 if __name__ == '__main__':
     suite = unittest.TestSuite()
 
-    tests = [TestSprint3Func("test_us20"),TestSprint3Func("test_us24")]
+    tests = [TestSprint3Func("test_us20"),TestSprint3Func("test_us24"),TestSprint3Func("test_US22"),TestSprint3Func("test_US23")]
     suite.addTests(tests)
 
     tests = [TestSprint3Func("test_IsCorrectGender"),TestSprint3Func("test_Is_Marriages_descendants")]
