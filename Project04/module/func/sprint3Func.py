@@ -57,4 +57,74 @@ def US24(WifeName, HusbandName, Married, famID, familyList):
     return flag,s
 
 
+def getDescendantList(fID, familyList):
+    
+    fmlst = []
+    clst = []
+    fmlst.append(fID)
+    newFamily = True
+    while newFamily == True:    
+        for fmId in fmlst:
+            currfm = getItemByID(familyList, fmId)
+
+            if not currfm:
+                continue
+            else:
+                #family exist
+                newFamily = False
+                for cId in currfm.Children:
+                    
+                    # add children
+                    if cId not in clst:
+                        clst.append(cId) 
+                        
+                    # check current children is in the family list or not
+                    for tp in familyList:
+                        if tp.HusbandID == cId or tp.WifeID == cId:
+                            if tp.ID not in fmlst:
+                                fmlst.append(tp.ID)
+                                newFamily = True
+    return clst
+
+def IsCorrectGender(wID, hID, individualList):
+    """Func for UserStory 21 IsCorrectGender(wID, hID, individualList)"""
+    flag = True
+    msg=''
+    t = getItemByID(individualList, wID)
+    if not t:
+        msg += "ERROR: FAMILY: US21: " + "Can't find Wife ID: " + wID + " in Data \n"
+        flag = False
+    else:
+        if t.Gender != "F": 
+            msg += "ERROR: FAMILY: US21: " + "Wife ID: " + wID + " Gender is not Female\n"
+            flag = False
+            
+    t = getItemByID(individualList, hID)
+    if not t:
+        msg += "ERROR: FAMILY: US21: " + "Can't find Husband ID: " + hID + " in Data \n"
+        flag = False
+    else:
+        if t.Gender != "M": 
+            msg += "ERROR: FAMILY: US21: " + "Husband ID: " + hID + " Gender is not Male\n"
+            flag = False            
+            
+    return flag,msg
+
+
+def Is_Marriages_descendants(familyList):
+    """Func for UserStory 17 Is_Marriages_descendants(familyList)"""
+    flag = True
+    msg=''
+    
+    for f in familyList:
+        childrenlst = getDescendantList(f.ID, familyList)
+        
+        if f.WifeID in childrenlst:
+            msg += "ERROR: FAMILY: US17: F.ID(" + f.ID+") Wife ID: " + f.WifeID + " marriages to descendants \n"
+            flag = False
+        if f.HusbandID in childrenlst:
+            msg += "ERROR: FAMILY: US17: F.ID(" + f.ID+") Husband ID: " + f.HusbandID + " marriages to descendants \n"
+            flag = False       
+            
+    return flag,msg
 
