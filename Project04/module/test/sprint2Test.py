@@ -60,7 +60,7 @@ class TestSprint2Func(unittest.TestCase):
             self.assertTrue(US10(fm.Married,cHusband.Birthday))
             self.assertTrue(US10(fm.Married,cWife.Birthday))    
     #US11:
-    def test_Bigamy(self):
+    def test_US11_Bigamy(self):
         ilist, flist = load_data()
         Bigamy_info = {}
         for fm in flist:
@@ -68,7 +68,7 @@ class TestSprint2Func(unittest.TestCase):
             Bigamy_info[fm.ID] = inf
         self.assertTrue(US11_noBigamy(Bigamy_info))    
     #US13:
-    def test_Sibling_Spacing(self):
+    def test_US13_Sibling_Spacing(self):
         """Test US13_Sibling_Spacing(fm, individualList)"""
         ilist, flist = load_data()
         
