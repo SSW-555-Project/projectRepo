@@ -3,8 +3,13 @@
 
 # In[ ]:
 
-
+import os
+import sys
 import datetime
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from func.BasicClass import *
+from func.sprint1Func import *
+
 
 #US_38_List upcoming birthdays
 def US38_upcomingBirthdays(pp):
@@ -37,3 +42,17 @@ def US39_upcomingAnniversaries(fm):
     if datetime.timedelta(days = 0) <= iterval <= datetime.timedelta(days=30):
         #print(fm.ID, marriedDay)
         return True
+    
+def US29(ID, Name ,Alive):
+    if Alive=='False':
+        return True
+    
+
+def US30(ID, Divorced, HusbandID, WifeID, individualList):
+    if Divorced=='NA':
+        for pp in individualList:
+            if HusbandID==pp.ID and pp.Alive=="True":
+                return True
+            if WifeID==pp.ID and pp.Alive=="True":
+                return True
+    

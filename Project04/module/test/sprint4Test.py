@@ -43,11 +43,25 @@ class TestSprint4Func(unittest.TestCase):
         for fm in flist:
             if fm.ID == "F3":
                 self.assertTrue(US39_upcomingAnniversaries(fm))
+                
+    def test_us29(self):
+        ilist, flist = load_data()
+        for pp in ilist:
+            if US29(pp.ID, pp.Name ,pp.Alive)!=None:
+                 self.assertTrue(US29(pp.ID, pp.Name ,pp.Alive))
+    
+    def test_us30(self):
+        ilist, flist = load_data()
+        for fm in flist:
+            if US30(fm.ID, fm.Divorced, fm.HusbandID, fm.WifeID,ilist)!=None:
+                self.assertTrue(US30(fm.ID, fm.Divorced, fm.HusbandID, fm.WifeID,ilist))
+                
             
 if __name__ == '__main__':
     suite = unittest.TestSuite()
 
-    tests = [TestSprint3Func("test_US38_upcomingBirthdays"),TestSprint3Func("test_US39_upcomingAnniversaries")]
+    tests = [TestSprint4Func("test_US38_upcomingBirthdays"),TestSprint4Func("test_US39_upcomingAnniversaries"),\
+            TestSprint4Func("test_us29"),TestSprint4Func("test_us30")]
     suite.addTests(tests)
     
     runner = unittest.TextTestRunner(verbosity=2)

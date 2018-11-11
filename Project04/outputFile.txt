@@ -147,7 +147,7 @@ ERROR: INDIVIDUAL: US09: I9 died 2011-09-04 before children birth 2018-04-06
 
 Here is Demo for Sprint3
 ERROR: INDIVIDUAL: US22: I24: Duplicate individual ID.
-ERROR: INDIVIDUAL: US22: I24: No more than one individual with the same name and birth date should appear.
+ERROR: INDIVIDUAL: US23: I24: No more than one individual with the same name and birth date should appear.
 ERROR: FAMILY: US20: F2: cannot marry because they are nieces or nephews
 ERROR: FAMILY: US20: F7: cannot marry because they are nieces or nephews
 ERROR: FAMILY: US20: F7: cannot marry because they are nieces or nephews
@@ -167,7 +167,32 @@ ERROR: FAMILY: US24: F8 and F13 has the same spouses by name and the same marria
 
 
 Here is Demo for Sprint4
+Find: Individual: US29: I6 is dead 
+Find: Individual: US29: I9 is dead 
 Find: Individual: US38: I10's birthday is coming within 30 days 
+Find: Individual: US29: I11 is dead 
 Find: Individual: US38: I20's birthday is coming within 30 days 
+Find: Individual: US30: I3 is still married and living 
+Find: Individual: US30: I42 is still married and living 
+Find: Individual: US30: I24 is still married and living 
+Find: Individual: US30: I8 is still married and living 
+Find: Individual: US30: I19 is still married and living 
+Find: Individual: US30: I20 is still married and living 
+Find: Individual: US30: I10 is still married and living 
+Find: Individual: US30: I12 is still married and living 
+Find: Individual: US30: I22 is still married and living 
+Find: Individual: US30: I37 is still married and living 
+Find: Individual: US30: I23 is still married and living 
+Find: Individual: US30: I41 is still married and living 
+Find: Individual: US30: I28 is still married and living 
+Find: Individual: US30: I29 is still married and living 
+Find: Individual: US30: I36 is still married and living 
+Find: Individual: US30: I35 is still married and living 
+Find: Individual: US30: I38 is still married and living 
+Find: Individual: US30: I40 is still married and living 
+Find: Individual: US30: I39 is still married and living 
+Find: Individual: US30: I25 is still married and living 
+Find: Individual: US30: I21 is still married and living 
+Find: Individual: US30: I46 is still married and living 
 Find: Family: US39: F3 married anniversary is coming within 30 days 
 Find: Family: US39: F10 married anniversary is coming within 30 days 
