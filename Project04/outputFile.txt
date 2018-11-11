@@ -11,7 +11,7 @@ Individuals
 |  I7 |    Fa /Pitt/     |   M    | 1800-03-09 | 218  |  True |     NA     |  None |   F5   |
 |  I8 |    Mo /Pitt/     |   F    | 1950-03-06 |  68  |  True |     NA     |   F7  |   F6   |
 |  I9 |  Britney /Liu/   |   F    | 1998-04-09 |  13  | False | 2011-09-04 |  None |   F4   |
-| I10 | Derrick /Smith/  |   M    | 1986-11-05 |  32  |  True |     NA     |   F1  |   F8   |
+| I10 | Derrick /Smith/  |   M    | 1986-11-25 |  31  |  True |     NA     |   F1  |   F8   |
 | I11 |   Death /Pitt/   |   F    | 2020-07-06 | -20  | False | 2000-02-07 |   F4  |   NA   |
 | I12 |    Ann /Hong/    |   F    | 2006-04-03 |  12  |  True |     NA     |  None |   F8   |
 | I13 |   Aaa /Smith/    |   M    | 2020-01-01 |  -1  |  True |     NA     |   F8  |   NA   |
@@ -21,8 +21,8 @@ Individuals
 | I17 |   Eee /Smith/    |   M    | 2020-01-01 |  -1  |  True |     NA     |   F8  |   NA   |
 | I18 | Youngest /Smith/ |   F    | 2030-01-01 | -11  |  True |     NA     |   F8  |   NA   |
 | I19 |   Lala /Pitt/    |   M    | 2300-08-01 | -281 |  True |     NA     |  None |   F7   |
-| I20 |   Haha /Pitt/    |   F    | 2200-11-01 | -182 |  True |     NA     |  None |   F7   |
-| I21 |    Mac /Pitx/    |   F    | 1987-08-13 |  31  |  True |     NA     |   F7  |  F15   |
+| I20 |   Haha /Pitt/    |   F    | 2200-11-18 | -182 |  True |     NA     |  None |   F7   |
+| I21 |    Mac /Pitx/    |   M    | 1987-08-13 |  31  |  True |     NA     |   F7  |  F15   |
 | I22 | Life Pitt /Pitt/ |   M    | 2020-02-19 |  -1  |  True |     NA     |   F4  |   F9   |
 | I23 |   Holy /Holy/    |   M    | 1960-09-09 |  58  |  True |     NA     |   F2  |  F10   |
 | I24 |    Fa /Pitt/     |   M    | 1800-03-09 | 218  |  True |     NA     |  None |   F5   |
@@ -57,18 +57,18 @@ Families
 |  F1 | 1980-04-11 | 1985-04-07 |     I1     |   Joe /Smith/    |    I2   | Jennifer /Smith/ |                                               ['I3', 'I4', 'I10']                                                |
 |  F2 | 2017-04-05 | 2019-05-01 |     I5     |   Brat /Pitt/    |    I6   |   Becky /Pitt/   |                                                  ['I2', 'I23']                                                   |
 |  F4 | 2014-10-08 | 2016-09-04 |     I5     |   Brat /Pitt/    |    I9   |  Britney /Liu/   |                                              ['I11', 'I22', 'I35']                                               |
-|  F3 | 2010-10-02 |     NA     |     I3     |   Dick /Smith/   |   I42   |   Jane /Holy/    |                                                     ['I44']                                                      |
+|  F3 | 2010-12-02 |     NA     |     I3     |   Dick /Smith/   |   I42   |   Jane /Holy/    |                                                     ['I44']                                                      |
 |  F5 | 1940-04-04 | 1930-05-07 |     I7     |    Fa /Pitt/     |    I8   |    Mo /Pitt/     |                                                      ['I5']                                                      |
 |  F6 | 1929-04-09 |     NA     |    I24     |  wwwwwww /Pitt/  |    I8   |    Mo /Pitt/     |                                                        []                                                        |
 |  F7 | 1980-06-03 |     NA     |    I19     |   Lala /Pitt/    |   I20   |   Haha /Pitt/    |                                                  ['I8', 'I21']                                                   |
 |  F8 | 2007-03-02 |     NA     |    I10     | Derrick /Smith/  |   I12   |    Ann /Hong/    | ['I13', 'I14', 'I15', 'I16', 'I17', 'I18', 'I25', 'I26', 'I27', 'I28', 'I29', 'I30', 'I31', 'I32', 'I33', 'I34'] |
 |  F9 | 2070-03-09 |     NA     |    I22     | Life Pitt /Pitt/ |   I37   |   Small /Pitt/   |                                                        []                                                        |
-| F10 | 1978-03-05 |     NA     |    I23     |   Holy /Holy/    |   I41   |  Partner /Holy/  |                                                  ['I42', 'I43']                                                  |
+| F10 | 1978-11-25 |     NA     |    I23     |   Holy /Holy/    |   I41   |  Partner /Holy/  |                                                  ['I42', 'I43']                                                  |
 | F11 | 1978-06-06 |     NA     |    I28     |    4 /Smith/     |   I29   |    5 /Smith/     |                                                        []                                                        |
 | F12 | 2030-02-02 |     NA     |    I36     |   Ss /Fedcba/    |   I35   |  Sister /Pitt/   |                                                     ['I37']                                                      |
 | F13 | 2007-03-02 |     NA     |    I38     | Derrick /Smith/  |   I40   |    Ann /Hong/    |                                                        []                                                        |
 | F14 | 2040-01-05 |     NA     |    I39     |    Same /God/    |   I25   |    1 /Smith/     |                                                     ['I38']                                                      |
-| F15 | 2015-01-01 |     NA     |    I21     |    Mac /Pitx/    |   I45   |      Sprin3      |                                                     ['I45']                                                      |
+| F15 | 2015-01-01 |     NA     |    I21     |    Mac /Pitx/    |   I46   |    Q1Sprint3     |                                                     ['I45']                                                      |
 +-----+------------+------------+------------+------------------+---------+------------------+------------------------------------------------------------------------------------------------------------------+
 
 Here is Demo for Sprint1
@@ -83,14 +83,14 @@ ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.
 ERROR: INDIVIDUAL: US01: Date: 2020-01-01 is not before current time.
 ERROR: INDIVIDUAL: US01: Date: 2030-01-01 is not before current time.
 ERROR: INDIVIDUAL: US01: Date: 2300-08-01 is not before current time.
-ERROR: INDIVIDUAL: US01: Date: 2200-11-01 is not before current time.
+ERROR: INDIVIDUAL: US01: Date: 2200-11-18 is not before current time.
 ERROR: INDIVIDUAL: US01: Date: 2020-02-19 is not before current time.
 ERROR: INDIVIDUAL: US07: I24 age 218 is over 150!
 ERROR: INDIVIDUAL: US07: I24 age 218 is over 150!
 ERROR: INDIVIDUAL: US01: Date: 2030-04-03 is not before current time.
 ERROR: INDIVIDUAL: US01: Date: 2060-05-07 is not before current time.
 ERROR: INDIVIDUAL: US01: Date: 2020-04-06 is not before current time.
-ERROR: INDIVIDUAL: US08: I10: 1986-11-05 Birth after parents divorced 1985-04-07
+ERROR: INDIVIDUAL: US08: I10: 1986-11-25 Birth after parents divorced 1985-04-07
 ERROR: INDIVIDUAL: US01: Date: 2019-05-01 is not before current time.
 ERROR: INDIVIDUAL: US08: I2: 1960-09-23 Birth before parents marriage 2017-04-05
 ERROR: INDIVIDUAL: US08: I11: 2020-07-06 Birth after parents divorced 2016-09-04
@@ -104,7 +104,7 @@ ERROR: FAMILY: US05: I9: 2011-09-04 Marriage before death 2011-09-04
 ERROR: FAMILY: US02: F5: I8 Birth day 1950-03-06 after Married day: 1940-04-04
 ERROR: FAMILY: US04: F5: Marriage 1940-04-04 after divorce 1930-05-07
 ERROR: FAMILY: US02: F6: I8 Birth day 1950-03-06 after Married day: 1929-04-09
-ERROR: FAMILY: US02: F7: I20 Birth day 2200-11-01 after Married day: 1980-06-03
+ERROR: FAMILY: US02: F7: I20 Birth day 2200-11-18 after Married day: 1980-06-03
 ERROR: FAMILY: US02: F11: I29 Birth day 2010-07-04 after Married day: 1978-06-06
 ERROR: FAMILY: US02: F13: I40 Birth day 2018-01-04 after Married day: 2007-03-02
 
@@ -114,6 +114,7 @@ ERROR: FAMILY: US16: Detected Family Id:F2: has the problem of male last names
 ERROR: FAMILY: US13: F2: Siblings Spacing between I2 and I23 is Wrong!
 ERROR: FAMILY: US13: F4: Siblings Spacing between I11 and I22 is Wrong!
 ERROR: FAMILY: US12: F7:  Detected Family Id:F7 parents not too old
+ERROR: FAMILY: US16: Detected Family Id:F7: has the problem of male last names
 ERROR: FAMILY: US10: I12: Married on 2007-03-02 before she was 14
 ERROR: FAMILY: US15: F8: Siblings not fewer than 15.
 ERROR: FAMILY: US13: F8: Siblings Spacing between I25 and I26 is Wrong!
@@ -135,10 +136,9 @@ ERROR: FAMILY: US13: F8: Siblings Spacing between I30 and I33 is Wrong!
 ERROR: FAMILY: US13: F8: Siblings Spacing between I32 and I33 is Wrong!
 ERROR: FAMILY: US14: F8 5 siblings were born at the same time
 ERROR: FAMILY: US10: I37: Married on 2070-03-09 before she was 14
-ERROR: FAMILY: US10: I41: Married on 1978-03-05 before she was 14
+ERROR: FAMILY: US10: I41: Married on 1978-11-25 before she was 14
 ERROR: FAMILY: US10: I35: Married on 2030-02-02 before she was 14
 ERROR: FAMILY: US16: Detected Family Id:F14: has the problem of male last names
-ERROR: FAMILY: US10: I45: Married on 2015-01-01 before she was 14
 ERROR: FAMILY: US11: F5 and F6: INDIVIDUAL ID: I8 Bigamy!
 ERROR: INDIVIDUAL: US09: I9 died 2011-09-04 before children birth 2020-07-06
 ERROR: INDIVIDUAL: US09: I9 died 2011-09-04 before children birth 2020-02-19
@@ -164,5 +164,10 @@ ERROR: FAMILY: US19: F3 INDIVIDUAL: I3 and I42 are cousins as their parents are 
 ERROR: FAMILY: US18: F11 INDIVIDUAL: I28 and I29 are siblings, they can not marry
 ERROR: FAMILY: US24: F13 and F8 has the same spouses by name and the same marriage date
 ERROR: FAMILY: US24: F8 and F13 has the same spouses by name and the same marriage date
-ERROR: FAMILY: US21: Husband ID: I21 Gender is not Male
-ERROR: FAMILY: US17: F.ID(F15) Wife ID: I45 marriages to descendants 
+
+
+Here is Demo for Sprint4
+Find: Individual: US38: I10's birthday is coming within 30 days 
+Find: Individual: US38: I20's birthday is coming within 30 days 
+Find: Family: US39: F3 married anniversary is coming within 30 days 
+Find: Family: US39: F10 married anniversary is coming within 30 days 
