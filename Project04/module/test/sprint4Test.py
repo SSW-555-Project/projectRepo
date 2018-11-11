@@ -62,6 +62,7 @@ if __name__ == '__main__':
 
     tests = [TestSprint4Func("test_US38_upcomingBirthdays"),TestSprint4Func("test_US39_upcomingAnniversaries"),\
             TestSprint4Func("test_us29"),TestSprint4Func("test_us30")]
+    
     suite.addTests(tests)
     
     runner = unittest.TextTestRunner(verbosity=2)

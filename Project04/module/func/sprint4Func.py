@@ -46,7 +46,6 @@ def US39_upcomingAnniversaries(fm):
 def US29(ID, Name ,Alive):
     if Alive=='False':
         return True
-    
 
 def US30(ID, Divorced, HusbandID, WifeID, individualList):
     if Divorced=='NA':
@@ -55,4 +54,3 @@ def US30(ID, Divorced, HusbandID, WifeID, individualList):
                 return True
             if WifeID==pp.ID and pp.Alive=="True":
                 return True
-    
