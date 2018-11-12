@@ -94,3 +94,18 @@ def ListLivingSingle(indlst):
             result.append(p)
             
     return result 
+
+
+def US35(day):
+    if day!='NA':
+        date=datetime.datetime.strptime(day, '%Y-%m-%d')
+        if (datetime.datetime.now()-date).days<=30:
+            return True
+    return False
+
+def US36(day):
+    if day!='NA':
+        date=datetime.datetime.strptime(day, '%Y-%m-%d')
+        if (datetime.datetime.now()-date).days<=30:
+            return True
+    return False

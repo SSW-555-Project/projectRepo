@@ -196,3 +196,17 @@ Find: Individual: US30: I21 is still married and living
 Find: Individual: US30: I46 is still married and living 
 Find: Family: US39: F3 married anniversary is coming within 30 days 
 Find: Family: US39: F10 married anniversary is coming within 30 days 
+Find: Individual: US35: I11 was born in the last 30 days 
+Find: Individual: US35: I13 was born in the last 30 days 
+Find: Individual: US35: I14 was born in the last 30 days 
+Find: Individual: US35: I15 was born in the last 30 days 
+Find: Individual: US35: I16 was born in the last 30 days 
+Find: Individual: US35: I17 was born in the last 30 days 
+Find: Individual: US35: I18 was born in the last 30 days 
+Find: Individual: US35: I19 was born in the last 30 days 
+Find: Individual: US35: I20 was born in the last 30 days 
+Find: Individual: US35: I22 was born in the last 30 days 
+Find: Individual: US35: I36 was born in the last 30 days 
+Find: Individual: US35: I37 was born in the last 30 days 
+Find: Individual: US35: I38 was born in the last 30 days 
+Find: Individual: US36: I6 died in the last 30 days 

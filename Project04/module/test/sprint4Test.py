@@ -70,12 +70,17 @@ class TestSprint4Func(unittest.TestCase):
         tp = ListLivingSingle(ilist)
 
         self.assertEqual(len(tp), 0)          
-            
+    def test_US35(self):
+        day= '2018-11-11'
+        self.assertTrue(US35(day))
+    def test_US36(self):
+        day= '2018-11-11'
+        self.assertTrue(US36(day))
 if __name__ == '__main__':
     suite = unittest.TestSuite()
 
     tests = [TestSprint4Func("test_US38_upcomingBirthdays"),TestSprint4Func("test_US39_upcomingAnniversaries"),\
-            TestSprint4Func("test_us29"),TestSprint4Func("test_us30")]
+            TestSprint4Func("test_us29"),TestSprint4Func("test_us30"),TestSprint4Func("test_US35"),TestSprint4Func("test_US36")]
     
     suite.addTests(tests)
     

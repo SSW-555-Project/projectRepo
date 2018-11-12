@@ -116,7 +116,7 @@ def isbirthBFmarried(fmID, fmDay,iBirth):
             #print(f"FAMILY: US02: {ID} married day '{marrDay}' is valid")
             return True
     else:
-        print(f"No Married date provided!")
+        print("No Married date provided!")
         return
 
 
