@@ -54,3 +54,43 @@ def US30(ID, Divorced, HusbandID, WifeID, individualList):
                 return True
             if WifeID==pp.ID and pp.Alive=="True":
                 return True
+
+
+def ListMultipleBirths(indlst):
+    
+    #This function is to list people who have the same birthday (User Story 32)
+    
+    dictBirths = {}
+    result = []
+    
+    # Using dict to record birthday
+    for p in indlst:     
+        if p.Birthday in dictBirths.keys():
+            dictBirths[p.Birthday].append(p.ID)
+        else:
+            dictBirths[p.Birthday] = []
+            dictBirths[p.Birthday].append(p.ID)
+    
+    # add the person into result if their birthday
+    for dbirth, deach in dictBirths.items():
+        if len(deach) >= 2:
+            for eID in deach:
+                each = getItemByID(indlst, eID)
+                result.append(each)
+
+    
+    return result
+
+def ListLivingSingle(indlst):
+
+    #This function is to list people who is single and age more than 30 (User Story 31)
+
+    result = []
+    
+    for p in indlst:
+        
+        if p.Alive == "True" and p.Spouse == "NA" and p.Age > 30 and p.Child == "None":
+            
+            result.append(p)
+            
+    return result 

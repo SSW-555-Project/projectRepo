@@ -55,7 +55,21 @@ class TestSprint4Func(unittest.TestCase):
         for fm in flist:
             if US30(fm.ID, fm.Divorced, fm.HusbandID, fm.WifeID,ilist)!=None:
                 self.assertTrue(US30(fm.ID, fm.Divorced, fm.HusbandID, fm.WifeID,ilist))
-                
+
+    def test_ListMultipleBirths(self):
+        ilist, flist = load_data()
+
+        tp = ListMultipleBirths(ilist)
+         
+        self.assertEqual(len(tp), 8)
+
+    def test_ListLivingSingle(self):
+
+        ilist, flist = load_data()
+
+        tp = ListLivingSingle(ilist)
+
+        self.assertEqual(len(tp), 0)          
             
 if __name__ == '__main__':
     suite = unittest.TestSuite()
@@ -65,6 +79,10 @@ if __name__ == '__main__':
     
     suite.addTests(tests)
     
+
+    tests = [TestSprint4Func("test_ListMultipleBirths"),TestSprint4Func("test_ListLivingSingle")]
+    suite.addTests(tests)
+
     runner = unittest.TextTestRunner(verbosity=2)
     runner.run(suite)
 
